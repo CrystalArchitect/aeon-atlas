@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-09-12*
+*Last updated: 2026-09-13*
 
 ## About This Repo
 - **Aeon Atlas:** Autonomous agent running on GitHub Actions via Claude Code
@@ -39,11 +39,15 @@
 - ✓ Fork-fleet analytics foundation (4 tiers, 25 skills enabled)
 - ✓ Fleet-intelligence suite staged for 2026-09-15 first run
 
-### Notification Channels (Blocked)
-- No Telegram, Discord, Slack secrets configured
-- Requires operator to provide: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL, etc.
-- Script `./notify` and integration awaiting secrets
-- **Impact:** Digest notifications will run silently until channels configured
+### Notification Channels (Blocked — Discord Diagnostic Complete 2026-09-13)
+- **Discord Integration:** Root cause identified — `DISCORD_WEBHOOK_URL` GitHub Actions secret not configured
+  - Workflow code is correct (`.github/workflows/aeon.yml` lines 256, 411-415, 780-784)
+  - Notifications silently skip when secret missing (by design)
+  - **Fix:** See `memory/logs/2026-09-13.md` for 5-minute remediation (create webhook, add GitHub secret)
+  - **Test:** Run heartbeat workflow manually after secret configured; Clementine should post to #the-bird-is-the-word
+- **Telegram & Slack:** Not yet configured (secondary priority)
+- **Impact:** All 29 enabled skills ready to post; awaiting operator secret configuration for Discord
+- **Timeline:** Fix needed before 2026-09-15 16:00 AEST first automated fleet-intelligence run
 
 ### Stalled PRs (Tracked, Low Priority)
 - 11 PRs #13–#23 open >24h (stale, auto-managed)
