@@ -1,23 +1,22 @@
-Heartbeat complete. All checks run; nothing crossed a notification threshold, so no notify was sent (per the skill's dedup convention).
+Heartbeat complete — everything green on the strict P0 conditions, no notification warranted.
 
 ## Summary
 
-Executed the `heartbeat` skill for the **2026-09-13 14:00 UTC slot** (ran ~11m late).
+Ran the **heartbeat** skill (2026-09-13 21:37 UTC, Sunday 20:00 slot, ~1.6h late). Read soul files (still empty templates → neutral tone), MEMORY.md, cron-state.json, issues/INDEX.md, aeon.yml, and the last 2 days of logs.
 
-**Findings by priority:**
-- **P0 (failed/stuck skills):** All clear. No failed or stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check `last_success` ~17h ago (< 36h threshold).
-- **P1 (PRs/issues):** 11 open PRs (#13–#23), all previously logged and deduped. PRs #24/#25 from prior runs are now closed/merged. 0 GitHub issues.
-- **P2 (memory):** No real follow-ups (MEMORY.md placeholders only).
-- **P3 (missing skills):** All 4 enabled skills present in state. **Notable:** `atlas` fired cleanly this Sunday (09-13 05:05, 10/10), but `atlas-layers`' 05:00 Sunday slot appears **missed** (last activity still 09-06). At 7 days stale on a weekly skill, this is under the 2×interval flag — monitor-only, escalate if it misses the 09-20 slot too.
+**Checks:**
+- **P0 — clear:** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check `last_success 14:12:15Z` is ~7.4h ago, well under 36h.
+- **P1:** 11 open PRs (#13–#23, all bot refreshes except #16 human deslop), all stalled >24h and previously logged → deduped. #24/#25 confirmed closed. No new PRs, 0 issues.
+- **P2:** No real memory follow-ups (placeholders only).
+- **P3:** All 4 enabled skills have state entries. atlas-layers' 09-13 05:00 Sunday slot was missed (last activity 09-06, ~7.7d) but weekly 2×interval=14d isn't crossed → **monitor-only**, not flagged. atlas fired cleanly this Sunday.
+- **Overall: 🟡 WATCH** (stalled PRs; no P0 fire).
 
-**Overall status:** 🟡 WATCH (no P0; stalled PRs hold it above 🟢 OK).
-
-**Notification:** Not sent — nothing new/actionable met threshold (soul files are empty templates, so neutral tone would apply anyway).
+**No notification sent** — nothing new or operator-actionable; consistent with prior-run dedup convention.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, updated 14:11 UTC, next run heartbeat 20:00 UTC, skill table re-sorted with atlas on top). Token pulse section omitted (no `articles/token-report-*.md`).
-- `memory/logs/2026-09-13.md` — created with today's heartbeat log entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 21:37 UTC, 4 skills sorted by last run, 0 open issues, next run heartbeat 08:00 UTC; Token pulse omitted — no token-report file).
+- `memory/logs/2026-09-13.md` — appended the 20:00-slot heartbeat entry.
 
-**Follow-up to watch:** the `atlas-layers` 09-20 05:00 slot — a second consecutive weekly miss (or >14d staleness) should be filed as an issue.
+**Follow-up:** Watch atlas-layers' **09-20 05:00** slot — a 2nd consecutive miss (or >14d stale) escalates to a filed issue (recurring ISS-005/ISS-002 signature).
 
-The status page lands on `main` via the workflow's auto-commit step; no explicit git commands needed.
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
