@@ -1,23 +1,23 @@
-Heartbeat complete. All checks ran green on P0; no notification warranted.
+Heartbeat complete. All checks run; nothing crossed a notification threshold, so no notify was sent (per the skill's dedup convention).
 
 ## Summary
 
-Ran the `heartbeat` skill (2026-09-12 20:59 UTC, Saturday — 20:00 slot, ~1h late).
+Executed the `heartbeat` skill for the **2026-09-13 14:00 UTC slot** (ran ~11m late).
 
-**Checks:**
-- **P0 — clear.** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. All 4 enabled skills healthy (heartbeat 89%, atlas 100%, atlas-layers 93%, atlas-improve 100%). Heartbeat self-check: last success ~23h ago, under the 36h threshold → does not fire.
-- **Scheduler note:** the 09-12 08:00 and 14:00 slots appear missed (state last advanced 09-11 22:00); this run is the 20:00 slot recovering ~1h late. Recurring ISS-005 late/skip pattern — monitor-only, not DEGRADED, since dispatch recovers and self-check < 36h.
-- **P1:** 13 open PRs. New PR #25 (amplitude analytics, ~6h old, not yet stalled). #24 crossed the 24h stall line but was already logged and is a human feature PR outside heartbeat's remit. Others (#13–#23) deduped. No open/urgent issues.
-- **P2/P3:** no flagged memory follow-ups; all enabled skills present and fresh.
+**Findings by priority:**
+- **P0 (failed/stuck skills):** All clear. No failed or stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check `last_success` ~17h ago (< 36h threshold).
+- **P1 (PRs/issues):** 11 open PRs (#13–#23), all previously logged and deduped. PRs #24/#25 from prior runs are now closed/merged. 0 GitHub issues.
+- **P2 (memory):** No real follow-ups (MEMORY.md placeholders only).
+- **P3 (missing skills):** All 4 enabled skills present in state. **Notable:** `atlas` fired cleanly this Sunday (09-13 05:05, 10/10), but `atlas-layers`' 05:00 Sunday slot appears **missed** (last activity still 09-06). At 7 days stale on a weekly skill, this is under the 2×interval flag — monitor-only, escalate if it misses the 09-20 slot too.
 
-**Overall verdict: 🟡 WATCH** (stalled PRs, 0 open issues).
+**Overall status:** 🟡 WATCH (no P0; stalled PRs hold it above 🟢 OK).
+
+**Notification:** Not sent — nothing new/actionable met threshold (soul files are empty templates, so neutral tone would apply anyway).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 2026-09-12 20:59 UTC, next run atlas 04:00 UTC Sunday; Token pulse omitted — no token-report article exists).
-- `memory/logs/2026-09-12.md` — created with this run's findings.
+- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, updated 14:11 UTC, next run heartbeat 20:00 UTC, skill table re-sorted with atlas on top). Token pulse section omitted (no `articles/token-report-*.md`).
+- `memory/logs/2026-09-13.md` — created with today's heartbeat log entry.
 
-**Notification:** not sent — no new operator-actionable item; fresh/deduped PRs, scheduler misses self-recovering, self-check < 36h.
+**Follow-up to watch:** the `atlas-layers` 09-20 05:00 slot — a second consecutive weekly miss (or >14d staleness) should be filed as an issue.
 
-**Follow-up:** file an issue if heartbeat self-check crosses 36h staleness; watch #24 (now stalled) and #25 on the next run. Next weekly cohort test Sunday 2026-09-13 04:00/05:00 UTC.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+The status page lands on `main` via the workflow's auto-commit step; no explicit git commands needed.
