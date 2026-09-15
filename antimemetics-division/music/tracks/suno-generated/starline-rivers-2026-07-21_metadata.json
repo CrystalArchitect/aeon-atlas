@@ -1,0 +1,24 @@
+{
+  "title": "Starline Rivers",
+  "artist": "Suno AI",
+  "date": "2026-07-21",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-starline-rivers-2026-07-21"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "celestial",
+    "flow",
+    "river"
+  ],
+  "canon_references": [
+    "Aurora",
+    "water imagery"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/starline-rivers-2026-07-21.mp3",
+  "description": "Flow of starlight as hydrological metaphor"
+}

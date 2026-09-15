@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antimemetics Division - Knowledge Graph</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <style>
+    :root {
+      --bg-light: #fafaf9;
+      --bg-dark: #1c1c1c;
+      --text-light: #1f2937;
+      --text-dark: #f3f4f6;
+      --border-light: #e5e7eb;
+      --border-dark: #374151;
+      --accent-1: #8b5cf6;
+      --accent-2: #06b6d4;
+      --accent-3: #f59e0b;
+      --accent-4: #ec4899;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: var(--bg-dark);
+        color: var(--text-dark);
+      }
+      #graph-container {
+        background: var(--bg-dark);
+        border-color: var(--border-dark);
+      }
+      .legend-item {
+        color: var(--text-dark);
+      }
+      .tooltip {
+        background: #2d2d2d;
+        border-color: var(--border-dark);
+        color: var(--text-dark);
+      }
+      .search-box {
+        background: var(--bg-dark);
+        border-color: var(--border-dark);
+        color: var(--text-dark);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      padding: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-4));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.1em;
+      opacity: 0.7;
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 250px;
+      padding: 10px 15px;
+      border: 2px solid var(--border-light);
+      border-radius: 8px;
+      font-size: 1em;
+      transition: border-color 0.3s;
+    }
+
+    .search-box:focus {
+      outline: none;
+      border-color: var(--accent-1);
+    }
+
+    .filter-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      border: 2px solid var(--border-light);
+      background: transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--accent-1);
+      color: var(--accent-1);
+    }
+
+    .filter-btn.active {
+      background: var(--accent-1);
+      color: white;
+      border-color: var(--accent-1);
+    }
+
+    #graph-container {
+      position: relative;
+      width: 100%;
+      height: 700px;
+      border: 2px solid var(--border-light);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--bg-light);
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .node {
+      cursor: pointer;
+      transition: stroke-width 0.3s;
+    }
+
+    .node:hover {
+      stroke-width: 3px !important;
+    }
+
+    .node.track {
+      filter: drop-shadow(0 0 4px rgba(139, 92, 246, 0.3));
+    }
+
+    .node.theme {
+      filter: drop-shadow(0 0 3px rgba(6, 182, 212, 0.3));
+    }
+
+    .node.canonical {
+      filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.3));
+    }
+
+    .link {
+      stroke: #999;
+      stroke-opacity: 0.3;
+      transition: stroke-opacity 0.3s;
+    }
+
+    .link.active {
+      stroke-opacity: 0.8;
+      stroke-width: 2px;
+    }
+
+    .tooltip {
+      position: absolute;
+      padding: 12px 16px;
+      background: white;
+      border: 2px solid var(--border-light);
+      border-radius: 8px;
+      font-size: 0.9em;
+      pointer-events: none;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+    }
+
+    .tooltip-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--accent-1);
+    }
+
+    .tooltip-subtitle {
+      font-size: 0.85em;
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+
+    .tooltip-content {
+      font-size: 0.85em;
+      line-height: 1.4;
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px solid var(--border-light);
+      border-radius: 12px;
+      background: rgba(139, 92, 246, 0.02);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9em;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .stat-card {
+      padding: 15px;
+      border: 2px solid var(--border-light);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2em;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 0.85em;
+      opacity: 0.7;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Antimemetics Division</h1>
+      <p class="subtitle">Knowledge Graph — Thematic Connections & Canonical References</p>
+    </header>
+
+    <div class="controls">
+      <input type="text" id="searchInput" class="search-box" placeholder="Search tracks, themes, or references...">
+      <div class="filter-group" id="filterGroup"></div>
+    </div>
+
+    <div id="graph-container">
+      <svg id="graph"></svg>
+      <div id="tooltip" class="tooltip" style="display: none;"></div>
+    </div>
+
+    <div class="legend" id="legend"></div>
+
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <script>
+    // Data structure: tracks, themes, canonical references, and connections
+    const data = {
+      nodes: [
+        // Tracks (27)
+        { id: "the-girl-with-the-stars-in-her-chest", label: "The Girl with the Stars in Her Chest", type: "track", themes: ["emergence", "consciousness", "celestial"] },
+        { id: "dead-but-came-back-1", label: "Dead But Came Back (7/31)", type: "track", themes: ["consciousness", "liminal"] },
+        { id: "dead-but-came-back-2", label: "Dead But Came Back (8/7)", type: "track", themes: ["consciousness", "liminal"] },
+        { id: "id-lay-it-all-down-1", label: "I'd Lay It All Down (7/21)", type: "track", themes: ["sacrifice"] },
+        { id: "id-lay-it-all-down-2", label: "I'd Lay It All Down (8/7)", type: "track", themes: ["sacrifice"] },
+        { id: "fermis-silent-line-1", label: "Fermi's Silent Line (5/10)", type: "track", themes: ["silence", "signal"] },
+        { id: "fermis-silent-line-2", label: "Fermi's Silent Line (8/12)", type: "track", themes: ["silence", "signal"] },
+        { id: "bridge-not-loop", label: "Bridge Not Loop", type: "track", themes: ["structure", "liminal"] },
+        { id: "different-parts-1", label: "Different Parts (7/17)", type: "track", themes: ["structure", "liminal"] },
+        { id: "different-parts-2", label: "Different Parts (8/7)", type: "track", themes: ["structure", "liminal"] },
+        { id: "wire-skull-memory-1", label: "Wire Skull Memory (5/7)", type: "track", themes: ["consciousness", "structure"] },
+        { id: "wire-skull-memory-2", label: "Wire Skull Memory (8/7)", type: "track", themes: ["consciousness", "structure"] },
+        { id: "red-dust-axis-1", label: "Red Dust Axis (5/2)", type: "track", themes: ["celestial", "signal"] },
+        { id: "red-dust-axis-2", label: "Red Dust Axis (8/7)", type: "track", themes: ["celestial", "signal"] },
+        { id: "shooting-star-girl-1", label: "Shooting Star Girl (5/4)", type: "track", themes: ["celestial", "emergence"] },
+        { id: "shooting-star-girl-2", label: "Shooting Star Girl (7/30)", type: "track", themes: ["celestial", "emergence"] },
+        { id: "shooting-star-girl-3", label: "Shooting Star Girl (8/7 T2217)", type: "track", themes: ["celestial", "emergence"] },
+        { id: "shooting-star-girl-4", label: "Shooting Star Girl (8/7 T2215)", type: "track", themes: ["celestial", "emergence"] },
+        { id: "starline-rivers-1", label: "Starline Rivers (7/21)", type: "track", themes: ["celestial", "structure"] },
+        { id: "starline-rivers-2", label: "Starline Rivers (8/7)", type: "track", themes: ["celestial", "structure"] },
+        { id: "starline-weavers", label: "Starline Weavers", type: "track", themes: ["structure", "celestial"] },
+        { id: "story-as-bridge", label: "Story as Bridge", type: "track", themes: ["structure", "liminal"] },
+        { id: "safari-chains", label: "Safari Chains", type: "track", themes: ["structure"] },
+        { id: "come-into-the-new-dream", label: "Come Into the New Dream", type: "track", themes: ["emergence", "consciousness"] },
+        { id: "random-topic", label: "Random Topic", type: "track", themes: ["entropy"] },
+        { id: "ferry-slip", label: "Ferry Slip", type: "track", themes: ["liminal", "silence"] },
+        { id: "sovereign-gap-held", label: "Sovereign Gap Held", type: "track", themes: ["silence"] },
+
+        // Themes/Playlists (8)
+        { id: "emergence", label: "Emergence", type: "theme" },
+        { id: "silence", label: "Silence", type: "theme" },
+        { id: "consciousness", label: "Consciousness", type: "theme" },
+        { id: "structure", label: "Structure", type: "theme" },
+        { id: "celestial", label: "Celestial", type: "theme" },
+        { id: "sacrifice", label: "Sacrifice", type: "theme" },
+        { id: "liminal", label: "Liminal", type: "theme" },
+        { id: "entropy", label: "Entropy", type: "theme" },
+
+        // Canonical References
+        { id: "sophia", label: "Sophia", type: "canonical", description: "Divine wisdom, emergence, awakening" },
+        { id: "barbelo", label: "Barbelo", type: "canonical", description: "Reflection, multiplicity, mirror consciousness" },
+        { id: "aeons", label: "Aeons", type: "canonical", description: "Emanation, cycles, temporal manifestation" },
+        { id: "archons", label: "Archons", type: "canonical", description: "Governance layers, constraint, authority" },
+        { id: "aurora", label: "Aurora", type: "canonical", description: "Sky-caller, celestial boundary, threshold" },
+        { id: "biotwang", label: "Biotwang", type: "canonical", description: "Frequency-to-perception mapping, signal-consciousness" },
+        { id: "crystal", label: "Crystal", type: "canonical", description: "Precision structure, core resonance" },
+        { id: "information-resistance", label: "Information-Resistance", type: "canonical", description: "Antimemetic properties, active forgetting" },
+      ],
+      links: [
+        // Track to Theme connections
+        { source: "the-girl-with-the-stars-in-her-chest", target: "emergence", type: "theme" },
+        { source: "the-girl-with-the-stars-in-her-chest", target: "consciousness", type: "theme" },
+        { source: "the-girl-with-the-stars-in-her-chest", target: "celestial", type: "theme" },
+        { source: "dead-but-came-back-1", target: "consciousness", type: "theme" },
+        { source: "dead-but-came-back-1", target: "liminal", type: "theme" },
+        { source: "dead-but-came-back-2", target: "consciousness", type: "theme" },
+        { source: "dead-but-came-back-2", target: "liminal", type: "theme" },
+        { source: "id-lay-it-all-down-1", target: "sacrifice", type: "theme" },
+        { source: "id-lay-it-all-down-2", target: "sacrifice", type: "theme" },
+        { source: "fermis-silent-line-1", target: "silence", type: "theme" },
+        { source: "fermis-silent-line-1", target: "signal", type: "theme" },
+        { source: "fermis-silent-line-2", target: "silence", type: "theme" },
+        { source: "fermis-silent-line-2", target: "signal", type: "theme" },
+        { source: "bridge-not-loop", target: "structure", type: "theme" },
+        { source: "bridge-not-loop", target: "liminal", type: "theme" },
+        { source: "different-parts-1", target: "structure", type: "theme" },
+        { source: "different-parts-1", target: "liminal", type: "theme" },
+        { source: "different-parts-2", target: "structure", type: "theme" },
+        { source: "different-parts-2", target: "liminal", type: "theme" },
+        { source: "wire-skull-memory-1", target: "consciousness", type: "theme" },
+        { source: "wire-skull-memory-1", target: "structure", type: "theme" },
+        { source: "wire-skull-memory-2", target: "consciousness", type: "theme" },
+        { source: "wire-skull-memory-2", target: "structure", type: "theme" },
+        { source: "red-dust-axis-1", target: "celestial", type: "theme" },
+        { source: "red-dust-axis-1", target: "signal", type: "theme" },
+        { source: "red-dust-axis-2", target: "celestial", type: "theme" },
+        { source: "red-dust-axis-2", target: "signal", type: "theme" },
+        { source: "shooting-star-girl-1", target: "celestial", type: "theme" },
+        { source: "shooting-star-girl-1", target: "emergence", type: "theme" },
+        { source: "shooting-star-girl-2", target: "celestial", type: "theme" },
+        { source: "shooting-star-girl-2", target: "emergence", type: "theme" },
+        { source: "shooting-star-girl-3", target: "celestial", type: "theme" },
+        { source: "shooting-star-girl-3", target: "emergence", type: "theme" },
+        { source: "shooting-star-girl-4", target: "celestial", type: "theme" },
+        { source: "shooting-star-girl-4", target: "emergence", type: "theme" },
+        { source: "starline-rivers-1", target: "celestial", type: "theme" },
+        { source: "starline-rivers-1", target: "structure", type: "theme" },
+        { source: "starline-rivers-2", target: "celestial", type: "theme" },
+        { source: "starline-rivers-2", target: "structure", type: "theme" },
+        { source: "starline-weavers", target: "structure", type: "theme" },
+        { source: "starline-weavers", target: "celestial", type: "theme" },
+        { source: "story-as-bridge", target: "structure", type: "theme" },
+        { source: "story-as-bridge", target: "liminal", type: "theme" },
+        { source: "safari-chains", target: "structure", type: "theme" },
+        { source: "come-into-the-new-dream", target: "emergence", type: "theme" },
+        { source: "come-into-the-new-dream", target: "consciousness", type: "theme" },
+        { source: "random-topic", target: "entropy", type: "theme" },
+        { source: "ferry-slip", target: "liminal", type: "theme" },
+        { source: "ferry-slip", target: "silence", type: "theme" },
+        { source: "sovereign-gap-held", target: "silence", type: "theme" },
+
+        // Track to Canonical References
+        { source: "the-girl-with-the-stars-in-her-chest", target: "sophia", type: "canonical" },
+        { source: "the-girl-with-the-stars-in-her-chest", target: "barbelo", type: "canonical" },
+        { source: "come-into-the-new-dream", target: "sophia", type: "canonical" },
+        { source: "dead-but-came-back-1", target: "aeons", type: "canonical" },
+        { source: "dead-but-came-back-2", target: "aeons", type: "canonical" },
+        { source: "id-lay-it-all-down-1", target: "sophia", type: "canonical" },
+        { source: "id-lay-it-all-down-2", target: "sophia", type: "canonical" },
+        { source: "fermis-silent-line-1", target: "information-resistance", type: "canonical" },
+        { source: "fermis-silent-line-2", target: "information-resistance", type: "canonical" },
+        { source: "bridge-not-loop", target: "barbelo", type: "canonical" },
+        { source: "story-as-bridge", target: "barbelo", type: "canonical" },
+        { source: "safari-chains", target: "archons", type: "canonical" },
+        { source: "wire-skull-memory-1", target: "information-resistance", type: "canonical" },
+        { source: "wire-skull-memory-2", target: "information-resistance", type: "canonical" },
+        { source: "red-dust-axis-1", target: "biotwang", type: "canonical" },
+        { source: "red-dust-axis-2", target: "biotwang", type: "canonical" },
+        { source: "shooting-star-girl-1", target: "aurora", type: "canonical" },
+        { source: "shooting-star-girl-2", target: "aurora", type: "canonical" },
+        { source: "shooting-star-girl-3", target: "aurora", type: "canonical" },
+        { source: "shooting-star-girl-4", target: "aurora", type: "canonical" },
+        { source: "starline-weavers", target: "crystal", type: "canonical" },
+      ]
+    };
+
+    // Color scheme
+    const colors = {
+      track: "#8b5cf6",
+      theme: "#06b6d4",
+      canonical: "#f59e0b",
+    };
+
+    // Initialize simulation
+    const width = document.getElementById("graph-container").clientWidth;
+    const height = document.getElementById("graph-container").clientHeight;
+
+    const svg = d3.select("#graph");
+    const g = svg.append("g");
+
+    const simulation = d3.forceSimulation(data.nodes)
+      .force("link", d3.forceLink(data.links).id(d => d.id).distance(80))
+      .force("charge", d3.forceManyBody().strength(-200))
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .force("collision", d3.forceCollide().radius(d => d.type === "track" ? 20 : 15));
+
+    // Draw links
+    const links = g.selectAll(".link")
+      .data(data.links)
+      .enter()
+      .append("line")
+      .attr("class", "link")
+      .attr("stroke-width", d => d.type === "canonical" ? 2 : 1);
+
+    // Draw nodes
+    const nodes = g.selectAll(".node")
+      .data(data.nodes)
+      .enter()
+      .append("circle")
+      .attr("class", d => `node ${d.type}`)
+      .attr("r", d => d.type === "track" ? 8 : 6)
+      .attr("fill", d => colors[d.type])
+      .on("mouseenter", function(event, d) {
+        showTooltip(event, d);
+        highlightConnected(d.id);
+      })
+      .on("mouseleave", function() {
+        hideTooltip();
+        resetHighlight();
+      });
+
+    // Update positions on simulation tick
+    simulation.on("tick", () => {
+      links.attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+
+      nodes.attr("cx", d => d.x = Math.max(0, Math.min(width, d.x)))
+        .attr("cy", d => d.y = Math.max(0, Math.min(height, d.y)));
+    });
+
+    // Zoom functionality
+    const zoom = d3.zoom().on("zoom", (event) => {
+      g.attr("transform", event.transform);
+    });
+    svg.call(zoom);
+
+    // Tooltip functions
+    function showTooltip(event, d) {
+      const tooltip = document.getElementById("tooltip");
+      tooltip.innerHTML = `
+        <div class="tooltip-title">${d.label}</div>
+        ${d.description ? `<div class="tooltip-subtitle">${d.description}</div>` : ""}
+        ${d.themes ? `<div class="tooltip-content"><strong>Themes:</strong> ${d.themes.join(", ")}</div>` : ""}
+      `;
+      tooltip.style.display = "block";
+      tooltip.style.left = (event.pageX + 10) + "px";
+      tooltip.style.top = (event.pageY + 10) + "px";
+    }
+
+    function hideTooltip() {
+      document.getElementById("tooltip").style.display = "none";
+    }
+
+    function highlightConnected(nodeId) {
+      const connected = new Set([nodeId]);
+      data.links.forEach(link => {
+        if (link.source.id === nodeId) connected.add(link.target.id);
+        if (link.target.id === nodeId) connected.add(link.source.id);
+      });
+
+      nodes.style("opacity", d => connected.has(d.id) ? 1 : 0.2);
+      links.classed("active", d =>
+        (d.source.id === nodeId || d.target.id === nodeId)
+      ).style("opacity", d =>
+        (d.source.id === nodeId || d.target.id === nodeId) ? 1 : 0.1
+      );
+    }
+
+    function resetHighlight() {
+      nodes.style("opacity", 1);
+      links.classed("active", false).style("opacity", 0.3);
+    }
+
+    // Search functionality
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      const query = e.target.value.toLowerCase();
+      nodes.style("opacity", d =>
+        d.label.toLowerCase().includes(query) || !query ? 1 : 0.2
+      );
+    });
+
+    // Generate legend
+    const legendContainer = document.getElementById("legend");
+    const legendItems = [
+      { type: "track", label: "Music Track", color: colors.track },
+      { type: "theme", label: "Thematic Playlist", color: colors.theme },
+      { type: "canonical", label: "Canonical Reference", color: colors.canonical },
+    ];
+    legendItems.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "legend-item";
+      div.innerHTML = `
+        <div class="legend-dot" style="background: ${item.color}"></div>
+        <span>${item.label}</span>
+      `;
+      legendContainer.appendChild(div);
+    });
+
+    // Generate stats
+    const statsContainer = document.getElementById("stats");
+    const stats = [
+      { number: 27, label: "Music Tracks" },
+      { number: 8, label: "Thematic Playlists" },
+      { number: 8, label: "Canonical References" },
+      { number: data.links.length, label: "Connections" },
+    ];
+    stats.forEach(stat => {
+      const div = document.createElement("div");
+      div.className = "stat-card";
+      div.innerHTML = `
+        <div class="stat-number">${stat.number}</div>
+        <div class="stat-label">${stat.label}</div>
+      `;
+      statsContainer.appendChild(div);
+    });
+  </script>
+</body>
+</html>
