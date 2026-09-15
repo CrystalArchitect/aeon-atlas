@@ -1,0 +1,24 @@
+{
+  "title": "Red Dust Axis",
+  "artist": "Suno AI",
+  "date": "2026-05-02",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-red-dust-axis-2026-05-02"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "cardinal",
+    "alignment",
+    "terrestrial"
+  ],
+  "canon_references": [
+    "Biotwang",
+    "frequency-to-color mapping"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/red-dust-axis-2026-05-02.mp3",
+  "description": "Harmonic alignment of earth and color"
+}

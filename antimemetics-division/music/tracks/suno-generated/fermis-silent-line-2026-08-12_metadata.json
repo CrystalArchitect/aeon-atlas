@@ -1,0 +1,24 @@
+{
+  "title": "Fermi's Silent Line",
+  "artist": "Suno AI",
+  "date": "2026-08-12",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-fermis-silent-line-2026-08-12"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "silence",
+    "signal",
+    "detection"
+  ],
+  "canon_references": [
+    "information-resistance",
+    "communication"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/fermis-silent-line-2026-08-12.mp3",
+  "description": "The boundary between noise and signal (revision)"
+}
