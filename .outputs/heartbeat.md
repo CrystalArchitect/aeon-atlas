@@ -1,21 +1,21 @@
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+Heartbeat complete. All green on the strict conditions; no notification warranted.
 
 ## Summary
 
-Ran the full heartbeat check at 2026-09-14 21:57 UTC (Monday, 20:00 slot ~2h late). Everything is within safe thresholds — no notification sent.
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify` (08:00 slot, ran ~1.6h late at 09:37 UTC Tuesday)
 
-**Findings by tier:**
-- **P0 (failed/stuck skills):** All clear. No `failed` or `dispatched` states, no `consecutive_failures ≥ 3`, no chronic sub-50% skills (heartbeat 89%, atlas 100%, atlas-layers 93%, atlas-improve 100%). Heartbeat self-check: last success ~24.3h ago, under the 36h threshold → no fire.
-- **P1 (PRs/issues):** 11 open PRs (#13–#23, all bot atlas/atlas-layers refreshes + #16 human deslop), all stalled >24h but previously logged and deduped. No new PRs, zero open GitHub issues.
-- **P2 (memory):** No real follow-ups (MEMORY.md placeholders only).
-- **P3 (missing skills):** All 4 enabled skills have state entries; none exceed 2× their interval. Two watch items (monitor-only, not yet flag-worthy): the 09-14 08:00/14:00 heartbeat slots were missed (recovered on dispatch), and atlas-layers missed its 09-13 05:00 weekly slot (~8.7d stale, under the 14d 2×-interval threshold).
+**Checks performed:**
+- **P0 — clear:** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. heartbeat self-check `last_success` ~11.6h ago (< 36h). Scheduler recovered cleanly after the 09-14 08:00/14:00 misses.
+- **P1:** 11 open PRs (all bot atlas refreshes + #16 human deslop), newest updated 09-06, all previously logged → deduped. 0 GitHub issues.
+- **P2:** No flagged memory follow-ups.
+- **P3:** All 4 enabled skills have state entries. atlas-layers still on watch (09-13 slot missed, ~9.2d stale, under the 14-day weekly 2× threshold — escalate only if 09-20 slot also misses).
 
-**Overall:** 🟡 WATCH (stalled PRs; no P0 fires).
+**Overall: 🟡 WATCH** — no P0 fires; 0 open issues, but long-stalled PRs hold it at WATCH.
+
+**Notification:** Not sent — nothing new and operator-actionable; all items deduped against recent logs.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 enabled skills, 0 open issues, next run heartbeat 08:00 UTC; Token pulse omitted — no `token-report-*` article exists).
-- `memory/logs/2026-09-14.md` — created with the run log.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 2026-09-15 09:37 UTC, next run heartbeat 14:00 UTC; Token pulse omitted — no token reports exist)
+- `memory/logs/2026-09-15.md` — created with the run's findings
 
-**Notification:** Not sent — all items deduped against the last 48h of logs; no new operator-actionable signal.
-
-**Follow-ups to watch (next runs):** whether the 09-20 05:00 atlas-layers slot fires (2nd consecutive miss → file issue), and whether heartbeat self-check crosses 36h. Commit to `main` is handled by the workflow's auto-commit step.
+**Follow-up:** Watch the atlas-layers 2026-09-20 05:00 slot — a second consecutive weekly miss (or >14d stale) should be escalated to a filed issue.
