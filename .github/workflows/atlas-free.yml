@@ -5,7 +5,7 @@
 # Discord notify is OPTIONAL via repository secret DISCORD_WEBHOOK_URL.
 # Claude-based `atlas` skill in aeon.yml is unchanged; this is the alternative.
 
-name: Atlas (free)
+name: Atlas free
 
 on:
   schedule:
