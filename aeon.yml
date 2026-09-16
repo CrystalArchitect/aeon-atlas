@@ -1,8 +1,9 @@
 # Aeon configuration
 #
-# TIMEZONE: All cron schedules below are in UTC. GitHub Actions requires UTC for scheduling.
-# AEST equivalents (UTC+10) are documented in memory/topics/fleet-intelligence.md
-# For operator reference: add 10 hours to UTC times to get AEST times
+# TIMEZONE: Cron values are UTC (GitHub Actions requirement). Operator clock is Australia/Sydney.
+# AEST = UTC+10 → add 10h. AEDT (first Sun Oct → first Sun Apr) = UTC+11 → add 11h.
+# Example: atlas "0 4 * * 0" = Sunday 14:00 AEST / Sunday 15:00 AEDT.
+# More skill↔local mappings: memory/topics/fleet-intelligence.md
 #
 # Enable skills by setting enabled: true. Multiple skills at the same time run in parallel.
 # Set var: "value" to pass a default parameter to the skill.
@@ -168,7 +169,7 @@ skills:
   fork-health-score: { enabled: true, schedule: "45 10 * * 1", model: "claude-sonnet-4-6", var: "" } # Monday 10:45 UTC — weekly per-fork health tier (ACTIVE/WARM/STALE/QUIET) from push recency + enabled skill count + 30d PR throughput. Top-10 ACTIVE leaderboard + fleet ACTIVE ratio; reuses fork-cohort state when fresh. Gated notify (QUIET when ratio steady and no top-10 churn / ≥3 tier transitions). Pass dry-run to skip notify, or owner/repo to override parent.
   workflow-security-audit: { enabled: true, schedule: "0 16 * * 0" } # Sunday — scan workflows for injection vectors
   skill-graph: { enabled: false, schedule: "0 17 * * 0" } # Sunday — regenerate skill dependency map
-  atlas: { enabled: true, schedule: "0 4 * * 0" } # Sunday 04:00 UTC — fetch all public forks of aaronjmars/aeon, parse their aeon.yml, regenerate atlas.{json,md,html}; silent on no-change
+  atlas: { enabled: true, schedule: "0 4 * * 0" } # Sunday 14:00 AEST (04:00 UTC; 15:00 AEDT in daylight saving) — fetch all public forks of aaronjmars/aeon, parse their aeon.yml, regenerate atlas.{json,md,html}; silent on no-change
   atlas-layers: { enabled: true, schedule: "0 5 * * 0" } # Sunday 05:00 UTC — render the seven-layer categorical view (quartz/content/atlas-layers.md) from data/atlas-layers.json + atlas.json + skill-packs.json; notify only on new curated-layer entries or new unclassified ecosystem candidates
   atlas-improve: { enabled: true, schedule: "0 6 1 * *" } # 1st of month 06:00 UTC — diff last 30d of atlas.json, pick highest-magnitude surprise, open one capped improvement PR; silent on no surprises
   skill-freshness: { enabled: true, schedule: "0 8 * * *", model: "claude-sonnet-4-6", var: "" } # daily 08:00 UTC — audit enabled skills' upstream file dependencies for staleness; pass dry-run to skip notify; per-class thresholds (articles 28h / .outputs 4h / topics 7d / state 30d); fingerprint-based dedup, 7d re-emit window
