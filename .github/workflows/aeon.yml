@@ -147,7 +147,7 @@ jobs:
           SECRETS=$(grep -oE '\$\{?[A-Z][A-Z0-9_]{2,}\}?' "$SKILL_FILE" 2>/dev/null | \
             sed 's/[${}]//g' | \
             grep -E '_(API_KEY|KEY|TOKEN|SECRET|WEBHOOK_URL)$' | \
-            grep -vE '^(GITHUB_TOKEN|GH_TOKEN|ANTHROPIC_API_KEY|CLAUDE_CODE_OAUTH_TOKEN|BANKR_LLM_KEY|TELEGRAM_|DISCORD_|SLACK_)' | \
+            grep -vE '^(GITHUB_TOKEN|GH_TOKEN|ANTHROPIC_API_KEY|CLAUDE_CODE_OAUTH_TOKEN|BANKR_LLM_KEY|OPENROUTER_API_KEY|DEEPSEEK_API_KEY|TELEGRAM_|DISCORD_|SLACK_)' | \
             sort -u) || true
 
           [ -z "$SECRETS" ] && exit 0
@@ -246,6 +246,8 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -305,6 +307,26 @@ jobs:
             unset ANTHROPIC_API_KEY
             unset CLAUDE_CODE_OAUTH_TOKEN
             echo "::notice::Routing through Bankr Gateway (https://llm.bankr.bot)"
+          elif [ "$GATEWAY" = "openrouter" ]; then
+            if [ -z "${OPENROUTER_API_KEY:-}" ]; then
+              echo "::error::gateway.provider=openrouter but OPENROUTER_API_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+            export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
+            export ANTHROPIC_API_KEY=""
+            unset CLAUDE_CODE_OAUTH_TOKEN
+            echo "::notice::Routing through OpenRouter (https://openrouter.ai/api)"
+          elif [ "$GATEWAY" = "deepseek" ]; then
+            if [ -z "${DEEPSEEK_API_KEY:-}" ]; then
+              echo "::error::gateway.provider=deepseek but DEEPSEEK_API_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
+            export ANTHROPIC_AUTH_TOKEN="$DEEPSEEK_API_KEY"
+            export ANTHROPIC_API_KEY=""
+            unset CLAUDE_CODE_OAUTH_TOKEN
+            echo "::notice::Routing through DeepSeek (https://api.deepseek.com/anthropic)"
           else
             echo "::notice::Using direct Anthropic API"
           fi
@@ -605,6 +627,8 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
           SKILL="${{ steps.skill.outputs.name }}"
 
@@ -612,10 +636,33 @@ jobs:
           case "$SKILL" in heartbeat|skill-health|skill-analytics|reflect|memory-flush|self-review|cost-report) echo "Skipping analysis for meta skill"; exit 0;; esac
 
           # Route through gateway if configured
-          if [ "${{ steps.run.outputs.GATEWAY }}" = "bankr" ] && [ -n "${BANKR_LLM_KEY:-}" ]; then
+          GATEWAY="${{ steps.run.outputs.GATEWAY }}"
+          if [ "$GATEWAY" = "bankr" ]; then
+            if [ -z "${BANKR_LLM_KEY:-}" ]; then
+              echo "::error::gateway.provider=bankr but BANKR_LLM_KEY secret is not set"
+              exit 1
+            fi
             export ANTHROPIC_BASE_URL="https://llm.bankr.bot"
             export ANTHROPIC_AUTH_TOKEN="$BANKR_LLM_KEY"
             unset ANTHROPIC_API_KEY
+            unset CLAUDE_CODE_OAUTH_TOKEN
+          elif [ "$GATEWAY" = "openrouter" ]; then
+            if [ -z "${OPENROUTER_API_KEY:-}" ]; then
+              echo "::error::gateway.provider=openrouter but OPENROUTER_API_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+            export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
+            export ANTHROPIC_API_KEY=""
+            unset CLAUDE_CODE_OAUTH_TOKEN
+          elif [ "$GATEWAY" = "deepseek" ]; then
+            if [ -z "${DEEPSEEK_API_KEY:-}" ]; then
+              echo "::error::gateway.provider=deepseek but DEEPSEEK_API_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
+            export ANTHROPIC_AUTH_TOKEN="$DEEPSEEK_API_KEY"
+            export ANTHROPIC_API_KEY=""
             unset CLAUDE_CODE_OAUTH_TOKEN
           fi
 
@@ -643,8 +690,14 @@ jobs:
 
           JSON format: {\"score\": N, \"assessment\": \"one line\", \"flags\": []}"
 
+          ANALYSIS_MODEL="claude-haiku-4-5-20251001"
+          if [ "$GATEWAY" = "openrouter" ] || [ "$GATEWAY" = "deepseek" ]; then
+            # Claude model names will not work on free gateways — reuse the skill's pinned model
+            ANALYSIS_MODEL="${{ steps.run.outputs.SKILL_MODEL }}"
+          fi
+
           if ! RAW=$(echo "$ANALYSIS_PROMPT" | claude -p - \
-            --model claude-haiku-4-5-20251001 --output-format json 2>&1); then
+            --model "$ANALYSIS_MODEL" --output-format json 2>&1); then
             echo "::warning::Skill analysis failed (non-fatal)"
             exit 0
           fi
@@ -706,11 +759,36 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
-          if [ "${{ steps.run.outputs.GATEWAY }}" = "bankr" ] && [ -n "${BANKR_LLM_KEY:-}" ]; then
+          GATEWAY="${{ steps.run.outputs.GATEWAY }}"
+          if [ "$GATEWAY" = "bankr" ]; then
+            if [ -z "${BANKR_LLM_KEY:-}" ]; then
+              echo "::error::gateway.provider=bankr but BANKR_LLM_KEY secret is not set"
+              exit 1
+            fi
             export ANTHROPIC_BASE_URL="https://llm.bankr.bot"
             export ANTHROPIC_AUTH_TOKEN="$BANKR_LLM_KEY"
             unset ANTHROPIC_API_KEY
+            unset CLAUDE_CODE_OAUTH_TOKEN
+          elif [ "$GATEWAY" = "openrouter" ]; then
+            if [ -z "${OPENROUTER_API_KEY:-}" ]; then
+              echo "::error::gateway.provider=openrouter but OPENROUTER_API_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+            export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
+            export ANTHROPIC_API_KEY=""
+            unset CLAUDE_CODE_OAUTH_TOKEN
+          elif [ "$GATEWAY" = "deepseek" ]; then
+            if [ -z "${DEEPSEEK_API_KEY:-}" ]; then
+              echo "::error::gateway.provider=deepseek but DEEPSEEK_API_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
+            export ANTHROPIC_AUTH_TOKEN="$DEEPSEEK_API_KEY"
+            export ANTHROPIC_API_KEY=""
             unset CLAUDE_CODE_OAUTH_TOKEN
           fi
           for pending in dashboard/outputs/.pending-*.md; do

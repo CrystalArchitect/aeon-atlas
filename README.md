@@ -37,7 +37,19 @@ So the dense edges of the graph aren't "these forks both contain heartbeat" (uni
 
 Weekly, Sunday 04:00 UTC. The `atlas` skill (see [`skills/atlas/SKILL.md`](skills/atlas/SKILL.md)) regenerates everything, diffs against the prior run, and opens a PR only when something changed materially (new fork, ★ jump, dormant fork resumed, new high-overlap pair, etc.).
 
-**Forks — free weekly atlas (no LLM):** enable GitHub Actions on your fork, then keep [`.github/workflows/atlas-free.yml`](.github/workflows/atlas-free.yml) (cron `0 4 * * 0` + `workflow_dispatch`). No Anthropic/Bankr/Ollama secrets required. Optionally add a repository secret `DISCORD_WEBHOOK_URL` to post when a PR opens; if unset, Discord is skipped quietly.
+### Free paths for forks
+
+**Zero-key weekly atlas (no LLM):** enable GitHub Actions on your fork, then keep [`.github/workflows/atlas-free.yml`](.github/workflows/atlas-free.yml) (cron `0 4 * * 0` + `workflow_dispatch`). No Anthropic/Bankr/Ollama secrets required. Optionally add a repository secret `DISCORD_WEBHOOK_URL` to post when a PR opens; if unset, Discord is skipped quietly.
+
+**Free LLM skills** (Claude Code via gateway — still needs a free-tier provider key):
+
+1. In `aeon.yml`, set `gateway.provider: openrouter` or `deepseek` (default stays `direct` for paid Anthropic).
+2. Add the matching Actions secret: `OPENROUTER_API_KEY` or `DEEPSEEK_API_KEY`.
+3. Pin `model:` (and any per-skill `model:`) to a free/compatible id — Claude model names will not work on these routes.
+   - OpenRouter examples: `deepseek/deepseek-chat-v3-0324:free`, `meta-llama/llama-4-scout:free`, `openrouter/free`
+   - DeepSeek examples: `deepseek-chat`, `deepseek-v4-flash`, `deepseek-v4-pro` (pin from [DeepSeek docs](https://api-docs.deepseek.com/); IDs change)
+4. Caveats: free OpenRouter models are rate-limited; tool/compatibility varies by model; Bankr/`direct` remain the paid paths.
+
 
 To regenerate locally:
 
