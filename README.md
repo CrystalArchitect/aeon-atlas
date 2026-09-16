@@ -37,6 +37,8 @@ So the dense edges of the graph aren't "these forks both contain heartbeat" (uni
 
 Weekly, Sunday 04:00 UTC. The `atlas` skill (see [`skills/atlas/SKILL.md`](skills/atlas/SKILL.md)) regenerates everything, diffs against the prior run, and opens a PR only when something changed materially (new fork, ★ jump, dormant fork resumed, new high-overlap pair, etc.).
 
+**Forks — free weekly atlas (no LLM):** enable GitHub Actions on your fork, then keep [`.github/workflows/atlas-free.yml`](.github/workflows/atlas-free.yml) (cron `0 4 * * 0` + `workflow_dispatch`). No Anthropic/Bankr/Ollama secrets required. Optionally add a repository secret `DISCORD_WEBHOOK_URL` to post when a PR opens; if unset, Discord is skipped quietly.
+
 To regenerate locally:
 
 ```bash
