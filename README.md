@@ -39,7 +39,7 @@ Weekly, Sunday 04:00 UTC. The `atlas` skill (see [`skills/atlas/SKILL.md`](skill
 
 ### Free paths for forks
 
-**Zero-key weekly atlas (no LLM):** see [PR #10](https://github.com/CrystalArchitect/aeon-atlas/pull/10) for `.github/workflows/atlas-free.yml` (cron + `workflow_dispatch`, no Anthropic/Bankr/OpenRouter/DeepSeek secrets). Keep that workflow if you only need the atlas refresh.
+**Zero-key weekly atlas (no LLM):** enable GitHub Actions on your fork, then keep [`.github/workflows/atlas-free.yml`](.github/workflows/atlas-free.yml) (cron `0 4 * * 0` + `workflow_dispatch`). No Anthropic/Bankr/Ollama secrets required. Optionally add a repository secret `DISCORD_WEBHOOK_URL` to post when a PR opens; if unset, Discord is skipped quietly.
 
 **Free LLM skills** (Claude Code via gateway — still needs a free-tier provider key):
 
@@ -49,6 +49,7 @@ Weekly, Sunday 04:00 UTC. The `atlas` skill (see [`skills/atlas/SKILL.md`](skill
    - OpenRouter examples: `deepseek/deepseek-chat-v3-0324:free`, `meta-llama/llama-4-scout:free`, `openrouter/free`
    - DeepSeek examples: `deepseek-chat`, `deepseek-v4-flash`, `deepseek-v4-pro` (pin from [DeepSeek docs](https://api-docs.deepseek.com/); IDs change)
 4. Caveats: free OpenRouter models are rate-limited; tool/compatibility varies by model; Bankr/`direct` remain the paid paths.
+
 
 To regenerate locally:
 
