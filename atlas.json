@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T05:50:11.104Z",
+  "generatedAt": "2026-09-16T06:09:48.183Z",
   "upstreams": [
     "aaronjmars/aeon",
     "aaronjmars/aeon-agent",
@@ -42,8 +42,8 @@
     "skillPacks": 0,
     "skillPacksWithFork": 0,
     "forksNotPubliclyListed": 272,
-    "nonForkUsers": 8,
-    "operators": 11
+    "nonForkUsers": 0,
+    "operators": 6
   },
   "skillPopularity": [
     {
@@ -60573,11 +60573,9 @@
         "2026-08-17T08:01:48Z",
         "2026-08-17T08:01:32Z",
         "2026-08-17T07:12:08Z",
-        "2026-08-17T07:11:58Z",
-        "2026-08-17T06:02:59Z",
-        "2026-08-17T06:02:46Z"
+        "2026-08-17T07:11:58Z"
       ],
-      "recentCommitCount": 568
+      "recentCommitCount": 566
     },
     {
       "id": "hurley87/aeon",
@@ -63386,11 +63384,9 @@
         "2026-08-17T07:37:05Z",
         "2026-08-17T07:36:49Z",
         "2026-08-17T06:39:15Z",
-        "2026-08-17T06:39:07Z",
-        "2026-08-17T05:57:05Z",
-        "2026-08-17T05:56:53Z"
+        "2026-08-17T06:39:07Z"
       ],
-      "recentCommitCount": 606
+      "recentCommitCount": 604
     },
     {
       "id": "ashneil12/aeon-upstream",
@@ -68452,11 +68448,9 @@
         "2026-08-17T07:27:13Z",
         "2026-08-17T07:27:04Z",
         "2026-08-17T06:23:01Z",
-        "2026-08-17T06:22:48Z",
-        "2026-08-17T05:52:10Z",
-        "2026-08-17T05:51:58Z"
+        "2026-08-17T06:22:48Z"
       ],
-      "recentCommitCount": 614
+      "recentCommitCount": 612
     },
     {
       "id": "seuzht/aeon",
@@ -75589,11 +75583,9 @@
         "2026-08-17T08:00:07Z",
         "2026-08-17T07:59:55Z",
         "2026-08-17T07:10:45Z",
-        "2026-08-17T07:10:34Z",
-        "2026-08-17T06:01:42Z",
-        "2026-08-17T06:01:29Z"
+        "2026-08-17T07:10:34Z"
       ],
-      "recentCommitCount": 812
+      "recentCommitCount": 810
     },
     {
       "id": "xBalbinus/aeon",
@@ -81254,7 +81246,7 @@
       "name": "aeon",
       "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-09-16T05:24:25Z",
+      "pushedAt": "2026-09-16T05:56:31Z",
       "defaultBranch": "main",
       "parentFullName": "aaronjmars/aeon",
       "isRoot": false,
@@ -81393,6 +81385,9 @@
         "write-tweet"
       ],
       "recentCommits": [
+        "2026-09-16T05:56:30Z",
+        "2026-09-16T05:56:28Z",
+        "2026-09-16T05:53:16Z",
         "2026-09-16T05:24:24Z",
         "2026-09-16T05:24:16Z",
         "2026-09-16T05:21:01Z",
@@ -82389,10 +82384,7 @@
         "2026-09-05T23:39:25Z",
         "2026-09-05T23:39:06Z",
         "2026-09-05T23:36:06Z",
-        "2026-09-05T23:04:18Z",
-        "2026-09-05T23:04:16Z",
-        "2026-09-05T23:01:02Z",
-        "2026-09-05T22:28:45Z"
+        "2026-09-05T23:04:18Z"
       ],
       "recentCommitCount": 1000
     },
@@ -105597,6 +105589,9 @@
         "you-web-search"
       ],
       "recentCommits": [
+        "2026-09-16T06:06:53Z",
+        "2026-09-16T06:06:50Z",
+        "2026-09-16T06:01:54Z",
         "2026-09-15T19:04:13Z",
         "2026-09-15T19:04:11Z",
         "2026-09-15T19:01:07Z",
@@ -106189,10 +106184,7 @@
         "2026-08-17T08:11:48Z",
         "2026-08-17T08:07:44Z",
         "2026-08-17T08:07:42Z",
-        "2026-08-17T08:05:46Z",
-        "2026-08-17T06:09:26Z",
-        "2026-08-17T06:09:24Z",
-        "2026-08-17T06:04:10Z"
+        "2026-08-17T08:05:46Z"
       ],
       "recentCommitCount": 596
     },
@@ -107219,13 +107211,9 @@
         "2026-08-17T08:24:10Z",
         "2026-08-17T08:22:29Z",
         "2026-08-17T08:22:26Z",
-        "2026-08-17T08:20:24Z",
-        "2026-08-17T06:06:06Z",
-        "2026-08-17T06:06:04Z",
-        "2026-08-17T06:05:12Z",
-        "2026-08-17T06:02:16Z"
+        "2026-08-17T08:20:24Z"
       ],
-      "recentCommitCount": 498
+      "recentCommitCount": 494
     },
     {
       "id": "AITOBIAS04/CHORUS",
@@ -113719,136 +113707,13 @@
     }
   ],
   "skillPacks": [],
-  "nonForkUsers": [
-    {
-      "id": "anajuliabit/aeon",
-      "owner": "anajuliabit",
-      "name": "aeon",
-      "stars": 6,
-      "pushedAt": "2026-09-14T15:46:48Z",
-      "defaultBranch": "main",
-      "description": "",
-      "htmlUrl": "https://github.com/anajuliabit/aeon",
-      "archived": false,
-      "isFork": false,
-      "parentFullName": null
-    },
-    {
-      "id": "Danypsy/aeon-perso",
-      "owner": "Danypsy",
-      "name": "aeon-perso",
-      "stars": 1,
-      "pushedAt": "2026-07-19T04:49:19Z",
-      "defaultBranch": "main",
-      "description": "Agent autonome personnel basé sur Aeon - Framework d'agent IA background qui s'exécute via GitHub Actions. Configuré pour Dany. Configure once, run forever.",
-      "htmlUrl": "https://github.com/Danypsy/aeon-perso",
-      "archived": false,
-      "isFork": false,
-      "parentFullName": null
-    },
-    {
-      "id": "eliza420ai-beep/LFG",
-      "owner": "eliza420ai-beep",
-      "name": "LFG",
-      "stars": 0,
-      "pushedAt": "2026-03-24T16:02:19Z",
-      "defaultBranch": "main",
-      "description": "",
-      "htmlUrl": "https://github.com/eliza420ai-beep/LFG",
-      "archived": false,
-      "isFork": false,
-      "parentFullName": null
-    },
-    {
-      "id": "ozgureyilmaz/aeon",
-      "owner": "ozgureyilmaz",
-      "name": "aeon",
-      "stars": 0,
-      "pushedAt": "2026-03-27T12:17:13Z",
-      "defaultBranch": "main",
-      "description": "",
-      "htmlUrl": "https://github.com/ozgureyilmaz/aeon",
-      "archived": false,
-      "isFork": false,
-      "parentFullName": null
-    },
-    {
-      "id": "Cbowcrptex/CBOWCRYPTEX",
-      "owner": "Cbowcrptex",
-      "name": "CBOWCRYPTEX",
-      "stars": 0,
-      "pushedAt": "2026-09-16T00:58:50Z",
-      "defaultBranch": "main",
-      "description": "Official CBOWCRYPTEX Web3 community project focused on crypto innovation, AI tools, trading utilities, and blockchain growth.",
-      "htmlUrl": "https://github.com/Cbowcrptex/CBOWCRYPTEX",
-      "archived": false,
-      "isFork": false,
-      "parentFullName": null
-    },
-    {
-      "id": "swarm-ai-research/aeon",
-      "owner": "swarm-ai-research",
-      "name": "aeon",
-      "stars": 0,
-      "pushedAt": "2026-09-16T04:13:36Z",
-      "defaultBranch": "main",
-      "description": "Public-facing snapshot of aeon (sanitized — no operational state)",
-      "htmlUrl": "https://github.com/swarm-ai-research/aeon",
-      "archived": false,
-      "isFork": false,
-      "parentFullName": null
-    },
-    {
-      "id": "Atrium-Hermes/atrium-lighthouse",
-      "owner": "Atrium-Hermes",
-      "name": "atrium-lighthouse",
-      "stars": 0,
-      "pushedAt": "2026-09-16T05:14:56Z",
-      "defaultBranch": "main",
-      "description": "",
-      "htmlUrl": "https://github.com/Atrium-Hermes/atrium-lighthouse",
-      "archived": false,
-      "isFork": false,
-      "parentFullName": null
-    },
-    {
-      "id": "dawsonblock/Aaron",
-      "owner": "dawsonblock",
-      "name": "Aaron",
-      "stars": 0,
-      "pushedAt": "2026-09-14T09:07:25Z",
-      "defaultBranch": "main",
-      "description": "",
-      "htmlUrl": "https://github.com/dawsonblock/Aaron",
-      "archived": false,
-      "isFork": false,
-      "parentFullName": null
-    }
-  ],
+  "nonForkUsers": [],
   "operators": [
-    {
-      "owner": "anajuliabit",
-      "footprint": 8,
-      "forks": 1,
-      "totalStars": 6,
-      "packs": 0,
-      "ecosystem": 0,
-      "novelSkills": 0
-    },
     {
       "owner": "We3In",
       "footprint": 6,
       "forks": 4,
       "totalStars": 0,
-      "packs": 0,
-      "ecosystem": 0,
-      "novelSkills": 0
-    },
-    {
-      "owner": "swarm-ai-research",
-      "footprint": 5,
-      "forks": 1,
-      "totalStars": 3,
       "packs": 0,
       "ecosystem": 0,
       "novelSkills": 0
@@ -113872,15 +113737,6 @@
       "novelSkills": 0
     },
     {
-      "owner": "Danypsy",
-      "footprint": 3,
-      "forks": 1,
-      "totalStars": 1,
-      "packs": 0,
-      "ecosystem": 0,
-      "novelSkills": 0
-    },
-    {
       "owner": "AITOBIAS04",
       "footprint": 3,
       "forks": 2,
@@ -113899,27 +113755,9 @@
       "novelSkills": 0
     },
     {
-      "owner": "Atrium-Hermes",
-      "footprint": 2,
-      "forks": 1,
-      "totalStars": 0,
-      "packs": 0,
-      "ecosystem": 0,
-      "novelSkills": 0
-    },
-    {
       "owner": "AntFleet",
       "footprint": 2,
       "forks": 2,
-      "totalStars": 0,
-      "packs": 0,
-      "ecosystem": 0,
-      "novelSkills": 0
-    },
-    {
-      "owner": "Cbowcrptex",
-      "footprint": 2,
-      "forks": 1,
       "totalStars": 0,
       "packs": 0,
       "ecosystem": 0,

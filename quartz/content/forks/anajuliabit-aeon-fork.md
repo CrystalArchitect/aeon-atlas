@@ -30,10 +30,6 @@ The most autonomous agent framework. No approval loops. No babysitting. Configur
 
 - [[forks/aaronjmars-aeon|aaronjmars/aeon]]
 
-## Operator
-
-- [[operators/anajuliabit|anajuliabit]]
-
 ## Novel skills shipped (spread to ≥ 2 forks)
 
 - [[novel-skills/agent-buzz|agent-buzz]]

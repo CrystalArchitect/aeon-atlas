@@ -30,10 +30,6 @@ A map of the aeon fork ecosystem — every public fork, what they enable, where 
 
 - [[forks/aaronjmars-aeon|aaronjmars/aeon]]
 
-## Operator
-
-- [[operators/swarm-ai-research|swarm-ai-research]]
-
 ## Novel skills shipped (spread to ≥ 2 forks)
 
 - [[novel-skills/agent-buzz|agent-buzz]]

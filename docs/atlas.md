@@ -39,9 +39,9 @@ Interactive map: [`atlas.html`](./atlas.html).
 
 | Repo | Last push | ★ |
 |---|---|---:|
+| [lawbworld-tech/aeon](https://github.com/lawbworld-tech/aeon) | 2026-09-16 | 0 |
 | [TakamiyaZee/aeon](https://github.com/TakamiyaZee/aeon) | 2026-09-16 | 0 |
 | [chxoky/aeon](https://github.com/chxoky/aeon) | 2026-09-16 | 0 |
-| [lawbworld-tech/aeon](https://github.com/lawbworld-tech/aeon) | 2026-09-16 | 0 |
 | [taekwonv89/aeon](https://github.com/taekwonv89/aeon) | 2026-09-16 | 0 |
 | [Svector-anu/svectors-lab](https://github.com/Svector-anu/svectors-lab) | 2026-09-16 | 2 |
 | [0xMal0u/aeon](https://github.com/0xMal0u/aeon) | 2026-09-16 | 0 |
