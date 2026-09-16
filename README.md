@@ -2,7 +2,7 @@
 
 A map of the [aeon](https://github.com/aaronjmars/aeon) fork ecosystem — every public fork, what they enable, where they cluster.
 
-This repo is a fork of [`aaronjmars/aeon`](https://github.com/aaronjmars/aeon) whose sole purpose is to keep that map fresh. One skill is enabled (`atlas`, weekly); everything else from the upstream skill catalog ships disabled.
+This repo is a fork of [`aaronjmars/aeon`](https://github.com/aaronjmars/aeon) whose sole purpose is to keep that map fresh. The weekly atlas refresh runs via the free no-LLM workflow [`.github/workflows/atlas-free.yml`](.github/workflows/atlas-free.yml); the Claude `atlas` skill in `aeon.yml` stays disabled (empty Anthropic credits). Everything else from the upstream skill catalog ships disabled unless you enable it.
 
 For what aeon itself is, see [the upstream README](https://github.com/aaronjmars/aeon).
 
@@ -35,11 +35,11 @@ So the dense edges of the graph aren't "these forks both contain heartbeat" (uni
 
 ## Refresh cadence
 
-Weekly, Sunday 04:00 UTC. The `atlas` skill (see [`skills/atlas/SKILL.md`](skills/atlas/SKILL.md)) regenerates everything, diffs against the prior run, and opens a PR only when something changed materially (new fork, ★ jump, dormant fork resumed, new high-overlap pair, etc.).
+Weekly, Sunday 04:00 UTC via **Atlas (free)** ([`.github/workflows/atlas-free.yml`](.github/workflows/atlas-free.yml)): `node scripts/atlas.mjs` regenerates everything, diffs against the prior run, and opens a PR only when something changed materially (new fork, ★ jump, dormant fork resumed, new high-overlap pair, etc.). No LLM keys required. The Claude `atlas` skill remains available in [`skills/atlas/SKILL.md`](skills/atlas/SKILL.md) if you enable it in `aeon.yml` with Anthropic credits.
 
 ### Free paths for forks
 
-**Zero-key weekly atlas (no LLM):** enable GitHub Actions on your fork, then keep [`.github/workflows/atlas-free.yml`](.github/workflows/atlas-free.yml) (cron `0 4 * * 0` + `workflow_dispatch`). No Anthropic/Bankr/Ollama secrets required. Optionally add a repository secret `DISCORD_WEBHOOK_URL` to post when a PR opens; if unset, Discord is skipped quietly.
+**Zero-key weekly atlas (no LLM) — this fork's Sunday path:** [`.github/workflows/atlas-free.yml`](.github/workflows/atlas-free.yml) (`Atlas (free)`, cron `0 4 * * 0` + `workflow_dispatch`). Enable GitHub Actions on your fork and keep that workflow. No Anthropic/Bankr/Ollama secrets required. Optionally add a repository secret `DISCORD_WEBHOOK_URL` to post when a PR opens; if unset, Discord is skipped quietly.
 
 **Free LLM skills** (Claude Code via gateway — still needs a free-tier provider key):
 

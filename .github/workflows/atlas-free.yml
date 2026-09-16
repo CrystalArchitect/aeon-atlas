@@ -3,9 +3,9 @@
 # No Anthropic / Bankr / Ollama / paid APIs required.
 # Cron `0 4 * * 0` = Sunday 04:00 UTC = Sunday 14:00 AEST / 15:00 AEDT.
 # Discord notify is OPTIONAL via repository secret DISCORD_WEBHOOK_URL.
-# Claude-based `atlas` skill in aeon.yml is unchanged; this is the alternative.
+# On this fork the Claude `atlas` skill in aeon.yml is disabled; this workflow is the Sunday path.
 
-name: Atlas free
+name: Atlas (free)
 
 on:
   schedule:
@@ -124,9 +124,7 @@ jobs:
 
           PR_URL=$(gh pr create \
             --title "atlas: ${SHORT}" \
-            --body "Weekly free atlas refresh (no LLM) — ${SHORT}.
-
-Interactive map: \`docs/atlas.html\`. Digest: \`docs/atlas.md\`." | tail -1)
+            --body "Weekly free atlas refresh (no LLM) — ${SHORT}. Interactive map at docs/atlas.html; digest at docs/atlas.md." | tail -1)
 
           echo "Opened PR: $PR_URL"
 
