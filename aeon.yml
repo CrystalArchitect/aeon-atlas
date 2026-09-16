@@ -281,13 +281,27 @@ chains:
   #     - skill: daily-routine, consume: [token-movers, paper-pick, github-issues, hacker-news-digest]
 
 # Default model for all skills. Override per-run via workflow_dispatch.
-# Options: claude-opus-4-8, claude-sonnet-4-6, claude-haiku-4-5-20251001
+# Options (direct / bankr Anthropic): claude-opus-4-8, claude-sonnet-4-6, claude-haiku-4-5-20251001
 # Bankr gateway also supports: gemini-3-pro, gemini-3-flash, gpt-5.2, kimi-k2.5, qwen3-coder
+# OpenRouter free examples (pin a concrete :free id — Claude names will not work):
+#   deepseek/deepseek-chat-v3-0324:free | meta-llama/llama-4-scout:free | openrouter/free
+# DeepSeek Anthropic endpoint examples (pin; IDs change — see https://api-docs.deepseek.com/):
+#   deepseek-chat | deepseek-v4-flash | deepseek-v4-pro
+# Per-skill override: under the skill key, model: "provider/model-id" (or set top-level model:).
 model: claude-opus-4-8
 
 # AI Gateway — route Claude Code requests through an LLM gateway.
-# provider: direct (default, uses ANTHROPIC_API_KEY) | bankr (uses BANKR_LLM_KEY)
-# Bankr docs: https://docs.bankr.bot/llm-gateway/overview
+# provider values:
+#   direct     — ANTHROPIC_API_KEY (paid Anthropic; default — leave as-is unless forking)
+#   bankr      — BANKR_LLM_KEY (paid) — https://docs.bankr.bot/llm-gateway/overview
+#   openrouter — OPENROUTER_API_KEY; free models use the :free suffix (rate-limited)
+#                https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration
+#   deepseek   — DEEPSEEK_API_KEY via https://api.deepseek.com/anthropic
+# Forks: set provider to openrouter or deepseek and pin model: to a free/compatible id.
+# Do not leave Claude model ids when using openrouter/deepseek — they will fail.
+# Example (commented — Crystal's default stays direct):
+# gateway:
+#   provider: openrouter
 gateway:
   provider: direct
 
