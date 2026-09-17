@@ -1,7 +1,7 @@
 {
   "heartbeat": {
-    "last_dispatch": "2026-09-17T14:52:16Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-17T18:37:45Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-17T14:53:05Z",
     "total_runs": 289,
     "total_successes": 245,
@@ -46,8 +46,8 @@
     "success_rate": 1
   },
   "skill-health": {
-    "last_dispatch": "2026-09-17T14:52:16Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-17T18:37:45Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-17T14:52:41Z",
     "total_runs": 15,
     "total_successes": 0,
@@ -57,8 +57,8 @@
     "last_error": "awned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refu"
   },
   "fork-first-run-alert": {
-    "last_dispatch": "2026-09-17T14:52:16Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-17T18:37:45Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-17T14:52:43Z",
     "total_runs": 13,
     "total_successes": 0,
@@ -68,8 +68,8 @@
     "last_error": "awned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refu"
   },
   "api-health-probe": {
-    "last_dispatch": "2026-09-17T14:52:16Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-17T18:37:45Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-17T14:52:40Z",
     "total_runs": 4,
     "total_successes": 0,
