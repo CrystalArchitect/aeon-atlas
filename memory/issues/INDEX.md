@@ -2,7 +2,9 @@
 
 ## Open
 
-_None._
+| ID | Title | Severity | Category | Detected |
+|----|-------|----------|----------|----------|
+| ISS-006 | scheduler quiet ~36.5h — heartbeat missed all three 2026-09-16 slots (fresh recurrence of ISS-005) | high | unknown | 2026-09-17 |
 
 ## Resolved
 
