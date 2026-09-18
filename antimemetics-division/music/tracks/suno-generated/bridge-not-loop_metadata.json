@@ -1,0 +1,24 @@
+{
+  "title": "Bridge Not Loop",
+  "artist": "Suno AI",
+  "date": "2026-08-15",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-bridge-not-loop"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "structure",
+    "crossing",
+    "transition"
+  ],
+  "canon_references": [
+    "Barbelo reflection",
+    "multiplicity"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/bridge-not-loop.mp3",
+  "description": "Passage rather than return; linear progression through reflective space"
+}

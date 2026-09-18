@@ -1,0 +1,23 @@
+{
+  "title": "Fermi's Silent Line",
+  "artist": "Suno AI",
+  "date": "2026-05-10",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-fermis-silent-line-2026-05-10"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "silence",
+    "signal",
+    "detection"
+  ],
+  "canon_references": [
+    "information-resistance"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/fermis-silent-line-2026-05-10.mp3",
+  "description": "Absence as a carrier of information"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Sovereign Gap Held",
+  "artist": "Suno AI",
+  "date": "2026-08-15",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-sovereign-gap-held"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "sovereignty",
+    "space",
+    "void"
+  ],
+  "canon_references": [
+    "Barbelo",
+    "ungenerated"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/sovereign-gap-held.mp3",
+  "description": "Held space and sovereign emptiness"
+}
