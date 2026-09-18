@@ -1,0 +1,24 @@
+{
+  "title": "Shooting Star Girl",
+  "artist": "Suno AI",
+  "date": "2026-05-04",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-shooting-star-girl-2026-05-04"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "celestial",
+    "movement",
+    "ephemerality"
+  ],
+  "canon_references": [
+    "Aurora",
+    "Sky-Caller"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/shooting-star-girl-2026-05-04.mp3",
+  "description": "Transient celestial emergence"
+}

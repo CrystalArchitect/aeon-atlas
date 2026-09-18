@@ -1,0 +1,24 @@
+{
+  "title": "Safari Chains",
+  "artist": "Suno AI",
+  "date": "2026-08-15",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-safari-chains"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "constraint",
+    "journey",
+    "binding"
+  ],
+  "canon_references": [
+    "Archons",
+    "governance"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/safari-chains.mp3",
+  "description": "Journey bound by governance structure"
+}

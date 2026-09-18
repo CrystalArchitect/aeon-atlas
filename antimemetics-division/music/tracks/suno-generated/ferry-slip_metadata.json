@@ -1,0 +1,24 @@
+{
+  "title": "Ferry Slip",
+  "artist": "Suno AI",
+  "date": "2026-08-15",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-ferry-slip"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "passage",
+    "liminal",
+    "transition"
+  ],
+  "canon_references": [
+    "Aeon",
+    "crossing"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/ferry-slip.mp3",
+  "description": "Liminal space and threshold passage"
+}

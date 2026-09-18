@@ -1,0 +1,23 @@
+{
+  "title": "Starline Rivers",
+  "artist": "Suno AI",
+  "date": "2026-08-07",
+  "source": {
+    "platform": "suno",
+    "id": "suno-archive-starline-rivers-2026-08-07"
+  },
+  "license": "CC-BY-4.0",
+  "commercial_use": true,
+  "narrative_themes": [
+    "celestial",
+    "flow",
+    "river"
+  ],
+  "canon_references": [
+    "Aurora"
+  ],
+  "duration_seconds": 180,
+  "cover_art": null,
+  "archive_source": "TerAustralis-Incognita/mythos/music/starline-rivers-2026-08-07.mp3",
+  "description": "Flow of starlight (revised)"
+}
