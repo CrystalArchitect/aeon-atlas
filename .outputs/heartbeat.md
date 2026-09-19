@@ -1,19 +1,19 @@
-Heartbeat complete for the 2026-09-18 20:00 slot (ran 20:25 UTC, ~26m late).
+Heartbeat complete for the 09-19 08:00 slot (executed 09:11 UTC).
 
 ## Summary
 
-**Verdict: `HEARTBEAT_OK · STATUS_PAGE=WATCH` — no notification sent.**
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=WATCH` — no notification sent (all findings deduped).
 
-**Checks:**
-- **P0 (skills):** All clear. No failed/stuck skills, no consecutive-failure streaks, no chronic failures. Heartbeat self-check healthy (`last_success` ~5.4h ago, well under 36h). Rates: heartbeat 90% (251/280), atlas 100%, atlas-layers 93%, atlas-improve 100%.
-- **Scheduler:** The 09-18 08:00 slot was missed (single miss, already logged), but 14:00 and this 20:00 slot both dispatched — two clean slots since, below the ISS-005/006 filing bar. No new issue filed.
-- **P1:** 12 open PRs — the 11 long-stalled ones (#13–#23, #16) all deduped; PR #30 (CrystalArchitect) is ~12.5h old, not yet stalled, already logged. No new PRs, no open GitHub issues.
-- **P2/P3:** No flagged memory follow-ups; all 4 enabled skills have current state entries, none overdue. Weekly cohort (atlas / atlas-layers) is the next test on Sun 09-20.
+**Checks run:**
+- **P0 (skill health):** All clear. No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check `last_success` ~12.7h ago (≪ 36h) → does not fire. Scheduler healthy (08:00 cron fired at 09:11, within slot).
+- **P1 (PRs/issues):** 12 open PRs, all stalled >24h and previously logged. PR #30 (CrystalArchitect) newly crossed 24h but already appears in the last 48h of logs → deduped. `gh issue list` empty, none urgent.
+- **P2 (memory):** No flagged follow-ups (MEMORY.md still template placeholders).
+- **P3 (missing/stale skills):** All 4 enabled skills present in cron-state. atlas-layers at ~13.2d (weekly, under 2×=14d threshold) — 09-13 slot was missed; watching Sunday 09-20 05:00. No flag.
 
-Overall is 🟡 **WATCH**, driven solely by the long-stalled PRs — nothing new or operator-actionable, so no notify (avoiding noise, per convention).
+**Overall status:** 🟡 WATCH (driven by stalled PRs; no P0 flags → not DEGRADED).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall WATCH, updated 2026-09-18 20:25 UTC, 0 open issues, next run heartbeat 08:00 UTC; Token pulse omitted — no token report exists).
-- `memory/logs/2026-09-18.md` — appended the 20:00-slot log entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-09-19 09:11 UTC, 0 open issues, next run heartbeat 14:00 UTC; Token pulse omitted — no token report exists).
+- `memory/logs/2026-09-19.md` — created with this run's findings.
 
-**Follow-up:** Confirm atlas + atlas-layers both fire on their Sunday 09-20 04:00/05:00 slots — atlas-layers has slipped its last two Sundays; if either misses, escalate to a scheduler-wide issue. (Note: bash output-redirection to the log was sandbox-blocked; used the Edit tool instead — worth keeping in mind for future runs. The auto-commit step will land both files on `main`.)
+**Follow-up:** Weekly cohort test tomorrow (Sunday 09-20) — confirm both atlas (04:00) and atlas-layers (05:00) dispatch. atlas-layers has slipped the last two Sundays; if it misses again, file a scheduler-wide issue.
