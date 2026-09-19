@@ -1,7 +1,7 @@
 {
   "heartbeat": {
-    "last_dispatch": "2026-09-19T05:41:52Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-19T09:43:10Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-19T05:42:16Z",
     "total_runs": 284,
     "total_successes": 247,
@@ -44,8 +44,8 @@
     "success_rate": 1
   },
   "api-health-probe": {
-    "last_dispatch": "2026-09-19T05:41:52Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-19T09:43:10Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-19T05:42:12Z",
     "total_runs": 9,
     "total_successes": 0,
@@ -66,8 +66,8 @@
     "last_error": "awned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refu"
   },
   "fork-first-run-alert": {
-    "last_dispatch": "2026-09-19T05:41:52Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-19T09:43:10Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-19T05:42:12Z",
     "total_runs": 4,
     "total_successes": 0,
@@ -75,5 +75,9 @@
     "consecutive_failures": 4,
     "success_rate": 0,
     "last_error": "awned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refu"
+  },
+  "skill-freshness": {
+    "last_dispatch": "2026-09-19T09:43:10Z",
+    "last_status": "dispatched"
   }
 }
