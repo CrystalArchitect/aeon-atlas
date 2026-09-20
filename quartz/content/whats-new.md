@@ -3,235 +3,25 @@ title: "What's new"
 tags: [meta]
 ---
 
-> Diff vs snapshot from **2026-06-28** (80 days ago). 90 new forks · 13 removed · 160 new novel skills · 0 new ecosystem entries · 0 new skill packs.
+> Diff vs snapshot from **2026-09-16** (4 days ago). 1 new forks · 2 removed · 0 new novel skills · 0 new ecosystem entries · 0 new skill packs.
 
-## New forks (90)
+## New forks (1)
 
-- [`iamziek/aeon`](https://github.com/iamziek/aeon) — 0 ★
-- [`traveler3022/aeon`](https://github.com/traveler3022/aeon) — 0 ★
-- [`niu12503/aeon`](https://github.com/niu12503/aeon) — 0 ★
-- [`0xsnackbaker/aeon`](https://github.com/0xsnackbaker/aeon) — 0 ★
-- [`Pinont/aeon.fun`](https://github.com/Pinont/aeon.fun) — 0 ★
-- [`caseykreps-eng/aeon`](https://github.com/caseykreps-eng/aeon) — 0 ★
-- [`corinth1ans/aeon`](https://github.com/corinth1ans/aeon) — 0 ★
-- [`krpx0341/aeon`](https://github.com/krpx0341/aeon) — 0 ★
-- [`darkstaryuri/aeon`](https://github.com/darkstaryuri/aeon) — 0 ★
-- [`cyborganeh/aeon`](https://github.com/cyborganeh/aeon) — 0 ★
-- [`Jason9720/aeon`](https://github.com/Jason9720/aeon) — 0 ★
-- [`dipanshuhappy/aeon`](https://github.com/dipanshuhappy/aeon) — 0 ★
-- [`forumchen388-debug/aeon`](https://github.com/forumchen388-debug/aeon) — 0 ★
-- [`keyurbodar/aeon`](https://github.com/keyurbodar/aeon) — 0 ★
-- [`MADRIGAL007/aeon`](https://github.com/MADRIGAL007/aeon) — 0 ★
-- [`weezyf1995-boop/aeon`](https://github.com/weezyf1995-boop/aeon) — 0 ★
-- [`elegarmco/aeon`](https://github.com/elegarmco/aeon) — 0 ★
-- [`MagIcKEarl/aeon`](https://github.com/MagIcKEarl/aeon) — 0 ★
-- [`Calcutatator/aeon`](https://github.com/Calcutatator/aeon) — 0 ★
-- [`cultosagent/aeon`](https://github.com/cultosagent/aeon) — 0 ★
-- [`jsfranklin221/aeon`](https://github.com/jsfranklin221/aeon) — 0 ★
-- [`thesmithdao/aeon`](https://github.com/thesmithdao/aeon) — 1 ★
-- [`kevin-houston/aeon`](https://github.com/kevin-houston/aeon) — 0 ★
-- [`theia-ttista/aeon`](https://github.com/theia-ttista/aeon) — 0 ★
-- [`hansj73/aeon`](https://github.com/hansj73/aeon) — 0 ★
+- [`Corykidios/aeon`](https://github.com/Corykidios/aeon) — 0 ★
 
-_…and 65 more._
+## Removed forks (2)
 
-## Removed forks (13)
-
-- `Marr554/aeon` (deleted or unforked)
-- `alpenflow/aeon` (deleted or unforked)
-- `maredek-bot/aeon` (deleted or unforked)
-- `zszkey/aeon-1` (deleted or unforked)
-- `SahilParikh03/aeon` (deleted or unforked)
-- `BuiltByEcho/aeon` (deleted or unforked)
-- `z-korp/aeon` (deleted or unforked)
-- `janicegrech1-hash/aeon` (deleted or unforked)
-- `VibeSan7/aeon` (deleted or unforked)
-- `sinan33644061-lab/aeon` (deleted or unforked)
-- `AntFleet/aeon-bench` (deleted or unforked)
-- `baseddevoloper/vvvkernel-skills` (deleted or unforked)
-- `varun86/aeon` (deleted or unforked)
-
-## New novel skills (160)
-
-- `aeonbook-onboarding`
-- `agent-buzz`
-- `agent-displacement`
-- `ai2human-handoff`
-- `ai2human-reward-campaign-reconciler`
-- `aixbt-pulse`
-- `api-health`
-- `approval-audit`
-- `article-queue`
-- `atrium-watch`
-- `batch-health`
-- `beamr-route`
-- `beat-tracker`
-- `builder-map`
-- `capabilities-map`
-- `channel-recap`
-- `code-health`
-- `compute-pulse`
-- `config-validator`
-- `content-performance`
-- `contract-audit`
-- `contributor-leaderboard`
-- `contributor-reward`
-- `contributor-spotlight`
-- `cost-report`
-- `create-campaign`
-- `ctrl`
-- `daily-shiplog`
-- `deal-flow`
-- `deep-research`
-- `deployer-trace`
-- `disclosure-emailer`
-- `disclosure-tracker`
-- `docs-sync`
-- `ecosystem-links`
-- `ecosystem-pulse`
-- `engagement-act`
-- `external-feature`
-- `farcaster-digest`
-- `fear-divergence`
-- `fleet-scorecard`
-- `fleet-state`
-- `followup-patrol`
-- `forecasting`
-- `fork-cohort`
-- `fork-digest`
-- `fork-events`
-- `fork-firstrun`
-- `fork-health`
-- `fork-release`
-- `framework-watch`
-- `frequency-guard`
-- `fund-flow`
-- `github-releases`
-- `goal-tracker`
-- `hn-digest`
-- `holder-concentration`
-- `honeypot-check`
-- `huggingface-trending`
-- `hyperliquid`
-- `idea-capture`
-- `idea-validator`
-- `issue-triage`
-- `janitor`
-- `launch-radar`
-- `lead-finder`
-- `linked-wallets`
-- `liquidpad-launch`
-- `list-digest`
-- `lp-lock`
-- `market-context`
-- `mcp-pulse`
-- `memory-dedupe`
-- `milestone-tracker`
-- `moltycash-campaign-agent`
-- `money-radar`
-- `monitor-kalshi`
-- `nq-research-scout`
-- `okf-export`
-- `okf-ingest`
-- `onboard`
-- `ops-recap`
-- `paper-digest`
-- `paper-pick`
-- `peng-pulse`
-- `peng-scout`
-- `phylax-audit`
-- `pm-pulse`
-- `pr-merge`
-- `pr-tracker`
-- `priority-brief`
-- `product-hunt`
-- `product-pulse`
-- `project-lens`
-- `push-recap`
-- `pvr-triage`
-- `pvr-watchlist`
-- `reddit-digest`
-- `reflect`
-- `refresh-x`
-- `reg-monitor`
-- `remix-tweets`
-- `repo-actions`
-- `repo-article`
-- `repo-pulse`
-- `repo-revive`
-- `repo-scanner`
-- `research-brief`
-- `retrospective`
-- `routine`
-- `rss-digest`
-- `rss-feed`
-- `rug-scan`
-- `rwa-pulse`
-- `security-digest`
-- `self-repair-ledger`
-- `self-review`
-- `show-hn`
-- `signal-verdict`
-- `skill-adoption`
-- `skill-analytics`
-- `skill-enabler`
-- `skill-evals`
-- `skill-freshness`
-- `skill-gap`
-- `skill-graph`
-- `skill-leaderboard`
-- `skill-scan`
-- `skill-spotlight`
-- `skill-triage`
-- `skill-update`
-- `slop-watch`
-- `sparkleware-catalog`
-- `spend-monitor`
-- `star-milestone`
-- `star-momentum`
-- `startup-idea`
-- `syndicate-article`
-- `technical-explainer`
-- `telegram-digest`
-- `thread-writer`
-- `tool-builder`
-- `topic-momentum`
-- `trader-memory-compact`
-- `treasury-info`
-- `tweet-digest`
-- `tweet-roundup`
-- `update-gallery`
-- `vch-plan-review`
-- `vch-program`
-- `vercel-projects`
-- `verdikta-hunter`
-- `vibecoding-digest`
-- `vigil`
-- `vigil-revoke`
-- `wallet-profile`
-- `wallet-risk`
-- `workflow-audit`
-- `x402-monitor`
-- `yield-farming`
+- `caseykreps-eng/aeon` (deleted or unforked)
+- `Trueness04/aeon` (deleted or unforked)
 
 ## Top ★ gainers
 
-- [`swarm-ai-research/aeon-atlas`](https://github.com/swarm-ai-research/aeon-atlas) +1 (now 3 ★)
+- [`use-agent-os/aeon`](https://github.com/use-agent-os/aeon) +1 (now 1 ★)
+
+## Top ★ losers
+
+- [`swarm-ai-research/aeon-atlas`](https://github.com/swarm-ai-research/aeon-atlas) -1 (now 2 ★)
 
 ## Went dormant (no push in 60+ days)
 
-- `madmystic/aeon` — last push 2026-06-26
-- `SamsShow/aeon` — last push 2026-06-26
-- `usephylax/aeon` — last push 2026-07-01
-- `saivarmadpr/aeon` — last push 2026-06-21
-- `Tholynceus/aeon` — last push 2026-06-19
-- `logbookbase/aeon` — last push 2026-06-19
-- `CharonAI-code/aeon` — last push 2026-06-20
-- `KK-OS/aeon` — last push 2026-06-18
-- `P9LLI/aeon` — last push 2026-06-18
-- `adlai88/aeon` — last push 2026-06-18
-- `vladimirvalcourt/aeon` — last push 2026-06-18
-- `hurley87/aeon` — last push 2026-06-17
-- `runchr-org/aeon` — last push 2026-06-16
-- `brainlabors-dot/aeon` — last push 2026-06-15
-- `rajkaria/aeon` — last push 2026-06-16
+- `Sauken-69/aeon` — last push 2026-07-18

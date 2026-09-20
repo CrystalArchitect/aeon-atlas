@@ -4,8 +4,39 @@
   <id>https://swarm-ai-research.github.io/aeon-atlas/feed.xml</id>
   <link href="https://swarm-ai-research.github.io/aeon-atlas/" rel="alternate"/>
   <link href="https://swarm-ai-research.github.io/aeon-atlas/feed.xml" rel="self"/>
-  <updated>2026-09-16T00:00:00Z</updated>
+  <updated>2026-09-20T00:00:00Z</updated>
   <author><name>scripts/atlas.mjs</name></author>
+  <entry>
+    <title>Digest 2026-09-20: 1 new fork · 2 removed</title>
+    <id>https://swarm-ai-research.github.io/aeon-atlas/digest/2026-09-20/</id>
+    <link href="https://swarm-ai-research.github.io/aeon-atlas/digest/2026-09-20/" rel="alternate"/>
+    <updated>2026-09-20T00:00:00Z</updated>
+    <summary>1 new fork · 2 removed</summary>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Diff vs snapshot from &lt;strong&gt;2026-09-16&lt;/strong&gt; (4 days ago). 1 new forks · 2 removed · 0 new novel skills · 0 new ecosystem entries · 0 new skill packs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;New forks (1)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Corykidios/aeon&quot;&gt;&lt;code&gt;Corykidios/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Removed forks (2)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;caseykreps-eng/aeon&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Trueness04/aeon&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Top ★ gainers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/use-agent-os/aeon&quot;&gt;&lt;code&gt;use-agent-os/aeon&lt;/code&gt;&lt;/a&gt; +1 (now 1 ★)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Top ★ losers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/swarm-ai-research/aeon-atlas&quot;&gt;&lt;code&gt;swarm-ai-research/aeon-atlas&lt;/code&gt;&lt;/a&gt; -1 (now 2 ★)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Went dormant (no push in 60+ days)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Sauken-69/aeon&lt;/code&gt; — last push 2026-07-18&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Digest 2026-09-16: 90 new forks · 13 removed · 160 new novel skills</title>
     <id>https://swarm-ai-research.github.io/aeon-atlas/digest/2026-09-16/</id>
