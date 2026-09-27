@@ -1,16 +1,15 @@
 ---
 title: "monitor-kalshi"
 tags: [novel-skill]
-adoption: 170
+adoption: 169
 ---
 
 # `monitor-kalshi`
 
-Custom skill shipped by 170 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 169 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]

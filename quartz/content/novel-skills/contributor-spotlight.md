@@ -1,16 +1,15 @@
 ---
 title: "contributor-spotlight"
 tags: [novel-skill]
-adoption: 145
+adoption: 144
 ---
 
 # `contributor-spotlight`
 
-Custom skill shipped by 145 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 144 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]

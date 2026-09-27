@@ -1,16 +1,15 @@
 ---
 title: "daily-routine"
 tags: [novel-skill]
-adoption: 147
+adoption: 146
 ---
 
 # `daily-routine`
 
-Custom skill shipped by 147 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 146 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
 - [[forks/alfahadgm-aeon|alfahadgm/aeon]]

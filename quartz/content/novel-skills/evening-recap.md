@@ -1,16 +1,15 @@
 ---
 title: "evening-recap"
 tags: [novel-skill]
-adoption: 139
+adoption: 138
 ---
 
 # `evening-recap`
 
-Custom skill shipped by 139 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 138 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
 - [[forks/alfahadgm-aeon|alfahadgm/aeon]]

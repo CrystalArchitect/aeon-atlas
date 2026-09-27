@@ -1,16 +1,15 @@
 ---
 title: "fork-first-run-alert"
 tags: [novel-skill]
-adoption: 92
+adoption: 91
 ---
 
 # `fork-first-run-alert`
 
-Custom skill shipped by 92 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 91 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/0xHarish-aeon|0xHarish/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]

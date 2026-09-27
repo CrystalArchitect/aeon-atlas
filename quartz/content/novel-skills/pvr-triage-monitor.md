@@ -1,16 +1,15 @@
 ---
 title: "pvr-triage-monitor"
 tags: [novel-skill]
-adoption: 59
+adoption: 58
 ---
 
 # `pvr-triage-monitor`
 
-Custom skill shipped by 59 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 58 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/0xHarish-aeon|0xHarish/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]

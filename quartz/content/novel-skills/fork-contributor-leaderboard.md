@@ -1,16 +1,15 @@
 ---
 title: "fork-contributor-leaderboard"
 tags: [novel-skill]
-adoption: 125
+adoption: 124
 ---
 
 # `fork-contributor-leaderboard`
 
-Custom skill shipped by 125 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 124 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/0xHarish-aeon|0xHarish/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
