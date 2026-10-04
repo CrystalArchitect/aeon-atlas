@@ -1,16 +1,15 @@
 ---
 title: "pm-pulse"
 tags: [novel-skill]
-adoption: 93
+adoption: 92
 ---
 
 # `pm-pulse`
 
-Custom skill shipped by 93 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 92 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]

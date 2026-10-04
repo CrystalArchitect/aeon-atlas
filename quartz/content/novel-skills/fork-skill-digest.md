@@ -1,16 +1,15 @@
 ---
 title: "fork-skill-digest"
 tags: [novel-skill]
-adoption: 122
+adoption: 120
 ---
 
 # `fork-skill-digest`
 
-Custom skill shipped by 122 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 120 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/0xHarish-aeon|0xHarish/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
@@ -123,7 +122,6 @@ Custom skill shipped by 122 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
 - [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
-- [[forks/ether-btc-aeon|ether-btc/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
 - [[forks/Aldine-aeon|Aldine/aeon]]
 - [[forks/FreyjasWrath-aeon|FreyjasWrath/aeon]]

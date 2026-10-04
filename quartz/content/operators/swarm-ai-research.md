@@ -14,11 +14,11 @@ Operator profile: 2 atlas artifacts (1 fork, 0 packs, 0 ecosystem entries). Foot
 
 ## Forks (1)
 
-- [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]] — 3 ★
+- [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]] — 2 ★
 
 ## Standalone repos using aeon (1)
 
-- [`swarm-ai-research/aeon`](https://github.com/swarm-ai-research/aeon) — 0 ★
+- [`swarm-ai-research/aeon`](https://github.com/swarm-ai-research/aeon) — 1 ★
 
 ## Get the badge
 

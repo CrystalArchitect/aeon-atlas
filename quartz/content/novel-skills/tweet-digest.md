@@ -1,16 +1,15 @@
 ---
 title: "tweet-digest"
 tags: [novel-skill]
-adoption: 105
+adoption: 103
 ---
 
 # `tweet-digest`
 
-Custom skill shipped by 105 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 103 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]
@@ -113,5 +112,4 @@ Custom skill shipped by 105 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/Anas-k-Tawfeeq-aeon|Anas-k-Tawfeeq/aeon]]
 - [[forks/maxlife-symbiostreams-aeon|maxlife-symbiostreams/aeon]]
 - [[forks/dennisonbertram-fork-aeon|dennisonbertram/fork-aeon]]
-- [[forks/naolnegassa-aeon|naolnegassa/aeon]]
 - [[forks/keysemails-aeon|keysemails/aeon]]

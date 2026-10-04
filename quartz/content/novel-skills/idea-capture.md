@@ -1,16 +1,15 @@
 ---
 title: "idea-capture"
 tags: [novel-skill]
-adoption: 187
+adoption: 184
 ---
 
 # `idea-capture`
 
-Custom skill shipped by 187 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 184 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]
@@ -155,7 +154,6 @@ Custom skill shipped by 187 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
 - [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
-- [[forks/ether-btc-aeon|ether-btc/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
 - [[forks/Aldine-aeon|Aldine/aeon]]
 - [[forks/FreyjasWrath-aeon|FreyjasWrath/aeon]]
@@ -195,5 +193,4 @@ Custom skill shipped by 187 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/Anas-k-Tawfeeq-aeon|Anas-k-Tawfeeq/aeon]]
 - [[forks/maxlife-symbiostreams-aeon|maxlife-symbiostreams/aeon]]
 - [[forks/dennisonbertram-fork-aeon|dennisonbertram/fork-aeon]]
-- [[forks/naolnegassa-aeon|naolnegassa/aeon]]
 - [[forks/keysemails-aeon|keysemails/aeon]]

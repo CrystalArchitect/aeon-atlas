@@ -4,8 +4,130 @@
   <id>https://swarm-ai-research.github.io/aeon-atlas/feed.xml</id>
   <link href="https://swarm-ai-research.github.io/aeon-atlas/" rel="alternate"/>
   <link href="https://swarm-ai-research.github.io/aeon-atlas/feed.xml" rel="self"/>
-  <updated>2026-09-16T00:00:00Z</updated>
+  <updated>2026-10-04T00:00:00Z</updated>
   <author><name>scripts/atlas.mjs</name></author>
+  <entry>
+    <title>Digest 2026-10-04: 17 new forks · 5 removed · 51 new novel skills</title>
+    <id>https://swarm-ai-research.github.io/aeon-atlas/digest/2026-10-04/</id>
+    <link href="https://swarm-ai-research.github.io/aeon-atlas/digest/2026-10-04/" rel="alternate"/>
+    <updated>2026-10-04T00:00:00Z</updated>
+    <summary>17 new forks · 5 removed · 51 new novel skills</summary>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Diff vs snapshot from &lt;strong&gt;2026-09-16&lt;/strong&gt; (18 days ago). 17 new forks · 5 removed · 51 new novel skills · 0 new ecosystem entries · 0 new skill packs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;New forks (17)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/CHEYCKIT/aeon&quot;&gt;&lt;code&gt;CHEYCKIT/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Svector-anu/aeon&quot;&gt;&lt;code&gt;Svector-anu/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/normancomics/aeon&quot;&gt;&lt;code&gt;normancomics/aeon&lt;/code&gt;&lt;/a&gt; — 1 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Domimueller85/aeon&quot;&gt;&lt;code&gt;Domimueller85/aeon&lt;/code&gt;&lt;/a&gt; — 1 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Blockchains/aeon&quot;&gt;&lt;code&gt;Blockchains/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nkipa/aeon&quot;&gt;&lt;code&gt;nkipa/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mardemsean/aeon-autonomous-agent-platform&quot;&gt;&lt;code&gt;mardemsean/aeon-autonomous-agent-platform&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/googio/aeon&quot;&gt;&lt;code&gt;googio/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/super-ai-8453/aeon&quot;&gt;&lt;code&gt;super-ai-8453/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Secure-Code-Pro-Zyloch/aeon&quot;&gt;&lt;code&gt;Secure-Code-Pro-Zyloch/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Oscar-Williams/aeon&quot;&gt;&lt;code&gt;Oscar-Williams/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/brainsparker/aeon&quot;&gt;&lt;code&gt;brainsparker/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Ditto190/aeon-automaton-modme&quot;&gt;&lt;code&gt;Ditto190/aeon-automaton-modme&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rohitctrl/aeon&quot;&gt;&lt;code&gt;rohitctrl/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Corykidios/aeon&quot;&gt;&lt;code&gt;Corykidios/aeon&lt;/code&gt;&lt;/a&gt; — 1 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/elegarmco/aeon-agent&quot;&gt;&lt;code&gt;elegarmco/aeon-agent&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/elegarmco/miroshark-aeon&quot;&gt;&lt;code&gt;elegarmco/miroshark-aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Removed forks (5)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;traveler3022/aeon&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;caseykreps-eng/aeon&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Trueness04/aeon&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Svector-anu/svectors-lab&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;chxoky/aeon&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;New novel skills (51)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ab-testing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ad-creative&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ads&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ai-seo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;analytics&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aso&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;attribution&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;churn-prevention&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;co-marketing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cold-email&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;community-marketing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;competitor-profiling&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;competitors&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;content-strategy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;copy-editing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;copywriting&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cro&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;customer-research&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dental-lead-scout&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;directory-submissions&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;emails&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;events&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;free-tools&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;image&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;influencer-marketing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;launch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lead-magnets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;marketing-council&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;marketing-ideas&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;marketing-loops&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;marketing-plan&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;marketing-psychology&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;marketing-seo-audit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;offers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;onboarding&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;paywalls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;popups&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pricing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;product-marketing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;programmatic-seo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;prospecting&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;public-relations&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;referrals&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;revops&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sales-enablement&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;schema&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;signup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site-architecture&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sms&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;social&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;video&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Top ★ gainers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/use-agent-os/aeon&quot;&gt;&lt;code&gt;use-agent-os/aeon&lt;/code&gt;&lt;/a&gt; +1 (now 1 ★)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/alfahadgm/aeon&quot;&gt;&lt;code&gt;alfahadgm/aeon&lt;/code&gt;&lt;/a&gt; +1 (now 1 ★)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gcampton/aeon&quot;&gt;&lt;code&gt;gcampton/aeon&lt;/code&gt;&lt;/a&gt; +1 (now 1 ★)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Top ★ losers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/swarm-ai-research/aeon-atlas&quot;&gt;&lt;code&gt;swarm-ai-research/aeon-atlas&lt;/code&gt;&lt;/a&gt; -1 (now 2 ★)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Went dormant (no push in 60+ days)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hesreallyhim/aeon-fork&lt;/code&gt; — last push 2026-08-03&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bspacer/aeon&lt;/code&gt; — last push 2026-08-05&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wasabinetwork/aeon&lt;/code&gt; — last push 2026-08-03&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mouse-value-add/aeon&lt;/code&gt; — last push 2026-08-01&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aiagentho/aeon&lt;/code&gt; — last push 2026-07-27&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sinfronterasai/aeon&lt;/code&gt; — last push 2026-07-27&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aganoob/aeon&lt;/code&gt; — last push 2026-07-27&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;amir-rezaei/aeon&lt;/code&gt; — last push 2026-07-23&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mirkosalvato1-ctrl/aeon&lt;/code&gt; — last push 2026-07-23&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Sauken-69/aeon&lt;/code&gt; — last push 2026-07-18&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BBridgeers/aeon&lt;/code&gt; — last push 2026-07-27&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;webbrain-one/aeon-agent&lt;/code&gt; — last push 2026-07-30&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Woke up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;LiamVisionary/aeon&lt;/code&gt; — pushed 2026-09-21&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;naolnegassa/aeon&lt;/code&gt; — pushed 2026-09-29&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Digest 2026-09-16: 90 new forks · 13 removed · 160 new novel skills</title>
     <id>https://swarm-ai-research.github.io/aeon-atlas/digest/2026-09-16/</id>
