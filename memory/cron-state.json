@@ -131,11 +131,11 @@
   },
   "fork-skill-gap": {
     "last_status": "failed",
-    "last_failed": "2026-10-05T22:10:15Z",
-    "total_runs": 105,
+    "last_failed": "2026-10-06T02:16:25Z",
+    "total_runs": 107,
     "total_successes": 0,
-    "total_failures": 105,
-    "consecutive_failures": 105,
+    "total_failures": 107,
+    "consecutive_failures": 107,
     "success_rate": 0,
     "last_error": "awned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refu"
   },
