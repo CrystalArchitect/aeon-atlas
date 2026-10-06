@@ -81,13 +81,13 @@
   "skill-freshness": {
     "last_dispatch": "2026-09-20T13:43:57Z",
     "last_status": "failed",
-    "last_failed": "2026-10-05T22:10:38Z",
-    "total_runs": 119,
+    "last_failed": "2026-10-06T02:16:51Z",
+    "total_runs": 120,
     "total_successes": 0,
-    "total_failures": 119,
-    "consecutive_failures": 119,
+    "total_failures": 120,
+    "consecutive_failures": 120,
     "success_rate": 0,
-    "last_error": "wned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refus"
+    "last_error": "awned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refu"
   },
   "workflow-security-audit": {
     "last_status": "failed",
