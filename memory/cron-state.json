@@ -161,13 +161,13 @@
   },
   "fork-skill-digest": {
     "last_status": "failed",
-    "last_failed": "2026-10-10T08:53:52Z",
-    "total_runs": 80,
+    "last_failed": "2026-10-10T14:50:10Z",
+    "total_runs": 82,
     "total_successes": 0,
-    "total_failures": 80,
-    "consecutive_failures": 80,
+    "total_failures": 82,
+    "consecutive_failures": 82,
     "success_rate": 0,
-    "last_error": "d\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit"
+    "last_error": "ed\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limi"
   },
   "fork-release-tracker": {
     "last_status": "failed",
