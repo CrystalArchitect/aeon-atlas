@@ -1,16 +1,15 @@
 ---
 title: "pm-intel"
 tags: [novel-skill]
-adoption: 70
+adoption: 69
 ---
 
 # `pm-intel`
 
-Custom skill shipped by 70 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 69 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]

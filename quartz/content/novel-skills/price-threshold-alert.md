@@ -1,16 +1,15 @@
 ---
 title: "price-threshold-alert"
 tags: [novel-skill]
-adoption: 109
+adoption: 108
 ---
 
 # `price-threshold-alert`
 
-Custom skill shipped by 109 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 108 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/0xHarish-aeon|0xHarish/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]

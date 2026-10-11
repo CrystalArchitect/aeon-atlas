@@ -1,16 +1,15 @@
 ---
 title: "v4-readiness"
 tags: [novel-skill]
-adoption: 124
+adoption: 123
 ---
 
 # `v4-readiness`
 
-Custom skill shipped by 124 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 123 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]

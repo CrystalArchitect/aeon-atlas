@@ -1,16 +1,15 @@
 ---
 title: "ai-framework-watch"
 tags: [novel-skill]
-adoption: 111
+adoption: 110
 ---
 
 # `ai-framework-watch`
 
-Custom skill shipped by 111 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 110 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/0xHarish-aeon|0xHarish/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]

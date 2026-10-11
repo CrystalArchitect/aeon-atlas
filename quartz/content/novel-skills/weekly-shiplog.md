@@ -1,16 +1,15 @@
 ---
 title: "weekly-shiplog"
 tags: [novel-skill]
-adoption: 139
+adoption: 137
 ---
 
 # `weekly-shiplog`
 
-Custom skill shipped by 139 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 137 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
 - [[forks/alfahadgm-aeon|alfahadgm/aeon]]
@@ -122,7 +121,6 @@ Custom skill shipped by 139 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
 - [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
-- [[forks/ether-btc-aeon|ether-btc/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
 - [[forks/Aldine-aeon|Aldine/aeon]]
 - [[forks/FreyjasWrath-aeon|FreyjasWrath/aeon]]

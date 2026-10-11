@@ -1,16 +1,15 @@
 ---
 title: "fleet-skill-adoption"
 tags: [novel-skill]
-adoption: 46
+adoption: 45
 ---
 
 # `fleet-skill-adoption`
 
-Custom skill shipped by 46 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 45 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/0xHarish-aeon|0xHarish/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
