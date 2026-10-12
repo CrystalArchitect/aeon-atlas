@@ -181,13 +181,13 @@
   },
   "skill-leaderboard": {
     "last_status": "failed",
-    "last_failed": "2026-10-12T00:47:21Z",
-    "total_runs": 3,
+    "last_failed": "2026-10-12T06:36:37Z",
+    "total_runs": 4,
     "total_successes": 0,
-    "total_failures": 3,
-    "consecutive_failures": 3,
+    "total_failures": 4,
+    "consecutive_failures": 4,
     "success_rate": 0,
-    "last_error": "ed\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limi"
+    "last_error": "d\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit"
   },
   "fork-contributor-leaderboard": {
     "last_status": "failed",
