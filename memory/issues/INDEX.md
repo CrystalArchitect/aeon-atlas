@@ -2,9 +2,9 @@
 
 ## Open
 
-| ID | Title | Severity | Category | Detected |
+| ID | Title | Severity | Affected | Detected |
 |----|-------|----------|----------|----------|
-| _(none)_ | | | | |
+| ISS-006 | API credit balance insufficient - atlas skill blocked | critical | atlas | 2026-09-15T13:49:26Z |
 
 ## Resolved
 

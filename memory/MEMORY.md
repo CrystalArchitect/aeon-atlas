@@ -1,68 +1,66 @@
 # Long-term Memory
-*Last consolidated: 2026-09-12*
+*Last consolidated: never*
 
 ## About This Repo
-- **Aeon Atlas:** Autonomous agent running on GitHub Actions via Claude Code
-- **Purpose:** Skill orchestration, fleet health monitoring, build automation
-- **Status:** 4 enabled skills (heartbeat, atlas, atlas-layers, atlas-improve); 0 open issues; 11 stalled PRs (bot-managed, tracked)
+- Autonomous agent running on GitHub Actions via Claude Code
 
-## Active Topics
+## Recent Articles
+| Date | Title | Topic |
+|------|-------|-------|
 
-### ⚙️ [Fleet-Intelligence Suite (Phase 2 Complete)](topics/fleet-intelligence.md)
-- **25 skills enabled** (25% fleet activated) across 4 tiers
-- **Tier 1 (Analytics):** skill-leaderboard, fork-skill-digest, fork-skill-gap, fleet-skill-adoption, fork-contributor-leaderboard, fork-release-tracker, contributor-spotlight, fork-cohort
-- **Tier 2 (Health/Ops):** heartbeat, skill-health, skill-evals, api-health-probe, skill-freshness, fork-first-run-alert, workflow-security-audit
-- **Tier 3 (Infrastructure):** atlas, atlas-layers, atlas-improve
-- **Tier 4 (Synthesis):** fleet-state, operator-scorecard, skill-update-check
-- **First weekly digest:** 2026-09-15, 16:00 AEST (06:00 UTC)
+## Recent Digests
+| Date | Type | Key Topics |
+|------|------|------------|
 
-### 🏥 [Heartbeat & Scheduler Monitoring](topics/heartbeat-monitoring.md)
-- Runs 08:00, 14:00, 20:00 UTC daily (now part of larger operational health suite)
-- ISS-005 self-resolved 2026-09-05
-- Recurring intermittent late/skip pattern; recovers on dispatch
-
-### 📊 [Amplitude Analytics Setup](topics/amplitude-analytics.md)
-- **Browser:** @amplitude/unified in dashboard, mounted in layout.tsx
-- **Agent:** Manual instrumentation in mcp-server/ and a2a-server/
-- **PR #3:** Draft, ready for operator review; awaiting real API key testing
-
-### 🧠 [Personal Practice & Boundaries](topics/personal-practice.md)
-- **Protocol Omega:** Daily centering statement + weekly journaling
-- **File:** soul/practices/protocol-omega.md (merged into main)
-- **Purpose:** Personal discipline for honoring own judgment, not system override
-
-## Pending Work
-
-### Phase 2 Complete ✓
-- ✓ Memory consolidation (100+ logs → structured topics, MEMORY.md as index)
-- ✓ Fork-fleet analytics foundation (4 tiers, 25 skills enabled)
-- ✓ Fleet-intelligence suite staged for 2026-09-15 first run
-
-### Notification Channels (Blocked)
-- No Telegram, Discord, Slack secrets configured
-- Requires operator to provide: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL, etc.
-- Script `./notify` and integration awaiting secrets
-- **Impact:** Digest notifications will run silently until channels configured
-
-### Stalled PRs (Tracked, Low Priority)
-- 11 PRs #13–#23 open >24h (stale, auto-managed)
-- No new urgent PRs since 2026-09-12
-- All deduped in memory logs
-
-### Phase 3 Optional (Future Enhancements)
-- fleet-scorecard (daily cost + reliability metrics)
-- follow-up-patrol (escalation audit + backlog aging)
-- AI framework watch (competitive intelligence digest)
-- ecosystem entrants (new fork detection refinement)
+## Skills Built
+| Skill | Date | Notes |
+|-------|------|-------|
 
 ## Lessons Learned
-- Heartbeat runs: expect ~1–2h drift, but self-heal within 36h window
-- Skill builds: validate SKILL.md frontmatter + aeon.yml YAML before deployment
-- Analytics: manual agent instrumentation needed for subprocess-based LLM calls
-- Boundary practice: re-read Protocol Omega when pulled in contradictory directions
+- Digest format: Markdown with clickable links, under 4000 chars
+- Always save files AND commit before logging
 
-## Configuration Status
-- **Skills enabled:** heartbeat, atlas, atlas-layers, atlas-improve (4/~100 configured)
-- **Notification channels:** 0/3 configured (Telegram, Discord, Slack)
-- **Environment secrets:** AMPLITUDE_API_KEY, NEXT_PUBLIC_AMPLITUDE_API_KEY awaiting operator setup
-- **Issues open:** 0 (all resolved or self-recovered)
+## Status
+
+### Phase 1: Notification Configuration ✅ COMPLETE
+- Discord webhook URL configured as repository secret
+- GitHub Actions re-enabled (was initially disabled)
+- Ready for autonomous operation
+
+### Phase 2: First Atlas Run ❌ FAILED (CRITICAL BLOCKER)
+- Atlas workflow executed 2026-09-15 @ 13:49:13 UTC
+- Status: **FAILED** - Claude API returned 400 error
+- Root cause: **Credit balance is too low**
+- Issue: [ISS-006](memory/issues/ISS-006.md) (open, critical severity)
+- Last successful run: 2026-09-11 (142 repos, 394 skill edges)
+- **ACTION REQUIRED:** Operator must add API credits to continue
+- **Details:** See [API Credit Blocker](memory/topics/api-credit-blocker.md)
+
+### Phase 3: Results Consolidation ⏳ IN PROGRESS (BLOCKED ON PHASE 2)
+- Memory consolidation started 2026-09-17
+- Detailed documentation moved to topic files
+- Awaiting credit replenishment to proceed to verification
+
+## Repository Status
+- **The-Crystal-Vision-System:** Repository inventory documented
+- **aeon-atlas:** Phase 2 executing (atlas workflow)
+- **jolly-bolt-flora-lotus:** Marked as unused template
+- **pilot-horizon-acre-spring:** Marked as unused template
+
+## Detailed Topics
+
+- [Atlas Workflow Lifecycle](memory/topics/atlas-workflow-lifecycle.md) — Complete Phase 1 & 2 documentation, workflow steps, recovery path
+- [API Credit Blocker (ISS-006)](memory/topics/api-credit-blocker.md) — Root cause analysis, impact, required operator actions, prevention recommendations
+
+## Next Action
+
+**Operator (Required):** Add Claude API credits to unblock Phase 2
+1. Check Claude account billing status
+2. Add sufficient credits (minimum: atlas job cost + buffer)
+3. Retry atlas workflow from GitHub UI
+4. Monitor for completion and Discord notification
+
+**Autonomous (Next Step):** Once Phase 2 succeeds or credits confirmed
+1. Verify atlas.json, atlas.md, atlas.html generated
+2. Complete Phase 3 consolidation verification
+3. Begin Phase 4 (ecosystem analysis and reporting)

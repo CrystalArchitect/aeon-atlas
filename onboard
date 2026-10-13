@@ -158,7 +158,11 @@ else
   fi
 fi
 
-# --- 4. authentication secret (Claude) ------------------------------------
+# --- 4. authentication secret (Claude / free gateways) --------------------
+
+# Which LLM gateway does aeon.yml ask for? (default: direct)
+GATEWAY_PROVIDER=$(grep -A1 '^gateway:' aeon.yml 2>/dev/null | grep 'provider:' | sed 's/.*provider:[[:space:]]*//' | sed "s/[\"' ]//g" || true)
+GATEWAY_PROVIDER="${GATEWAY_PROVIDER:-direct}"
 
 claude_secret_state="unknown"
 if has_secret ANTHROPIC_API_KEY; then
@@ -167,16 +171,61 @@ if has_secret ANTHROPIC_API_KEY; then
 elif has_secret CLAUDE_CODE_OAUTH_TOKEN; then
   emit pass "auth secret" "CLAUDE_CODE_OAUTH_TOKEN configured" ""
   claude_secret_state="ok"
+elif [ "$GATEWAY_PROVIDER" = "openrouter" ] && has_secret OPENROUTER_API_KEY; then
+  emit pass "auth secret" "OPENROUTER_API_KEY configured (gateway.provider=openrouter)" \
+    "Pin model: to an OpenRouter free/compatible id (Claude names will not work)."
+  claude_secret_state="ok"
+elif [ "$GATEWAY_PROVIDER" = "deepseek" ] && has_secret DEEPSEEK_API_KEY; then
+  emit pass "auth secret" "DEEPSEEK_API_KEY configured (gateway.provider=deepseek)" \
+    "Pin model: to a DeepSeek id (e.g. deepseek-chat / deepseek-v4-flash)."
+  claude_secret_state="ok"
+elif [ "$GATEWAY_PROVIDER" = "bankr" ] && has_secret BANKR_LLM_KEY; then
+  emit pass "auth secret" "BANKR_LLM_KEY configured (gateway.provider=bankr)" ""
+  claude_secret_state="ok"
 else
-  case "$?" in
+  # Capture has_secret failure from the last elif probe when provider mismatched,
+  # then optionally notice free-gateway secrets that are unused.
+  auth_probe_rc=1
+  if [ "$GATEWAY_PROVIDER" = "openrouter" ]; then
+    has_secret OPENROUTER_API_KEY; auth_probe_rc=$?
+  elif [ "$GATEWAY_PROVIDER" = "deepseek" ]; then
+    has_secret DEEPSEEK_API_KEY; auth_probe_rc=$?
+  elif [ "$GATEWAY_PROVIDER" = "bankr" ]; then
+    has_secret BANKR_LLM_KEY; auth_probe_rc=$?
+  else
+    has_secret ANTHROPIC_API_KEY; auth_probe_rc=$?
+  fi
+
+  if [ "$GATEWAY_PROVIDER" = "direct" ]; then
+    if has_secret OPENROUTER_API_KEY; then
+      emit warn "auth secret" "OPENROUTER_API_KEY present but gateway.provider is direct" \
+        "Set gateway.provider: openrouter in aeon.yml (and pin a :free model) to use it."
+    elif has_secret DEEPSEEK_API_KEY; then
+      emit warn "auth secret" "DEEPSEEK_API_KEY present but gateway.provider is direct" \
+        "Set gateway.provider: deepseek in aeon.yml (and pin a DeepSeek model id) to use it."
+    fi
+  fi
+
+  case "$auth_probe_rc" in
     1)
-      emit fail "auth secret" "neither ANTHROPIC_API_KEY nor CLAUDE_CODE_OAUTH_TOKEN configured" \
-        "gh secret set ANTHROPIC_API_KEY --body 'sk-ant-...' -R $REPO_SLUG  (or run 'claude setup-token' and set CLAUDE_CODE_OAUTH_TOKEN)"
+      if [ "$GATEWAY_PROVIDER" = "openrouter" ]; then
+        emit fail "auth secret" "gateway.provider=openrouter but OPENROUTER_API_KEY is not set" \
+          "gh secret set OPENROUTER_API_KEY --body 'sk-or-...' -R $REPO_SLUG"
+      elif [ "$GATEWAY_PROVIDER" = "deepseek" ]; then
+        emit fail "auth secret" "gateway.provider=deepseek but DEEPSEEK_API_KEY is not set" \
+          "gh secret set DEEPSEEK_API_KEY --body '...' -R $REPO_SLUG"
+      elif [ "$GATEWAY_PROVIDER" = "bankr" ]; then
+        emit fail "auth secret" "gateway.provider=bankr but BANKR_LLM_KEY is not set" \
+          "gh secret set BANKR_LLM_KEY --body '...' -R $REPO_SLUG"
+      else
+        emit fail "auth secret" "neither ANTHROPIC_API_KEY nor CLAUDE_CODE_OAUTH_TOKEN configured" \
+          "gh secret set ANTHROPIC_API_KEY --body 'sk-ant-...' -R $REPO_SLUG  (or run 'claude setup-token' and set CLAUDE_CODE_OAUTH_TOKEN; forks can use openrouter/deepseek — see README)"
+      fi
       claude_secret_state="missing"
       ;;
     *)
       emit warn "auth secret" "could not verify (gh not authenticated for $REPO_SLUG)" \
-        "Authenticate with 'gh auth login' to verify, or check Settings → Secrets and variables → Actions for ANTHROPIC_API_KEY or CLAUDE_CODE_OAUTH_TOKEN."
+        "Authenticate with 'gh auth login' to verify, or check Settings → Secrets and variables → Actions for ANTHROPIC_API_KEY, CLAUDE_CODE_OAUTH_TOKEN, OPENROUTER_API_KEY, or DEEPSEEK_API_KEY."
       claude_secret_state="unverified"
       ;;
   esac

@@ -17,3 +17,4 @@ Heartbeat complete for the 09-19 08:00 slot (executed 09:11 UTC).
 - `memory/logs/2026-09-19.md` — created with this run's findings.
 
 **Follow-up:** Weekly cohort test tomorrow (Sunday 09-20) — confirm both atlas (04:00) and atlas-layers (05:00) dispatch. atlas-layers has slipped the last two Sundays; if it misses again, file a scheduler-wide issue.
+🟡 New PRs need review: #27 (CrystalArchitect — CrystalCore.OS dashboard, analytics + new skills) and #28 (CrystalArchitect — Antimemetics Division interactive layer + music archive), both opened 2026-09-15. First external human contributions since #16; 11 older PRs (#13–#23, mostly bot atlas refreshes) still stalled. Fleet health green: 0 failed/stuck skills, 0 open issues.

@@ -1,0 +1,138 @@
+# Atlas (free) — no-LLM weekly atlas refresh for every fork.
+# Free path: runs only `node scripts/atlas.mjs` (+ optional universe build).
+# No Anthropic / Bankr / Ollama / paid APIs required.
+# Cron `0 4 * * 0` = Sunday 04:00 UTC = Sunday 14:00 AEST / 15:00 AEDT.
+# Discord notify is OPTIONAL via repository secret DISCORD_WEBHOOK_URL.
+# On this fork the Claude `atlas` skill in aeon.yml is disabled; this workflow is the Sunday path.
+
+name: Atlas (free)
+
+on:
+  schedule:
+    - cron: "0 4 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  atlas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run atlas extractor
+        id: extract
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          node scripts/atlas.mjs 2>&1 | tee /tmp/atlas-run.log
+          SUMMARY=$(grep -E '^atlas: [0-9]+ repos' /tmp/atlas-run.log | tail -1 || true)
+          {
+            echo "summary<<EOF"
+            echo "${SUMMARY:-atlas refreshed}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Build universe (optional)
+        run: |
+          set +e
+          if [ -f scripts/build-universe.sh ]; then
+            if bash scripts/build-universe.sh; then
+              echo "Universe build OK"
+            else
+              echo "::warning::scripts/build-universe.sh failed; continuing without universe rebuild"
+            fi
+          else
+            echo "scripts/build-universe.sh not present; skipping"
+          fi
+
+      - name: Diff / PR / Discord
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          ATLAS_SUMMARY: ${{ steps.extract.outputs.summary }}
+        run: |
+          set -euo pipefail
+
+          # Material outputs: core atlas artifacts + universe if present.
+          MATERIAL=(atlas.json docs/atlas.md docs/atlas.html)
+          [ -f docs/atlas.json ] && MATERIAL+=(docs/atlas.json)
+          [ -d docs/universe ] && MATERIAL+=(docs/universe)
+
+          # Broader commit set when something material changed (matches atlas skill).
+          COMMIT_PATHS=(
+            atlas.json
+            docs/atlas.md
+            docs/atlas.html
+            docs/atlas.json
+            docs/innovations.md
+            docs/disabled-defaults.md
+            docs/ecosystem.md
+            docs/skill-packs.md
+            docs/operators.md
+            docs/non-fork-users.md
+            docs/badges
+            docs/whats-new.md
+            docs/digest.md
+            docs/digest
+            docs/feed.xml
+            history
+            quartz/content
+            docs/universe
+          )
+
+          if git diff --quiet -- "${MATERIAL[@]}"; then
+            echo "No material atlas change — silent exit (no PR, no Discord)."
+            exit 0
+          fi
+
+          TODAY=$(date -u +%Y-%m-%d)
+          BRANCH="atlas/${TODAY}"
+          VERDICT="${ATLAS_SUMMARY:-atlas refreshed}"
+          SHORT=$(echo "$VERDICT" | sed 's/^atlas: //')
+
+          # Match free/script workflows (ecosystem-from-issue.yml).
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -B "$BRANCH"
+
+          for p in "${COMMIT_PATHS[@]}"; do
+            [ -e "$p" ] && git add -A -- "$p" || true
+          done
+
+          if git diff --cached --quiet; then
+            echo "Staged empty after add — silent exit."
+            exit 0
+          fi
+
+          git commit -m "atlas: ${SHORT}"
+          git push -u origin "$BRANCH"
+
+          PR_URL=$(gh pr create \
+            --title "atlas: ${SHORT}" \
+            --body "Weekly free atlas refresh (no LLM) — ${SHORT}. Interactive map at docs/atlas.html; digest at docs/atlas.md." | tail -1)
+
+          echo "Opened PR: $PR_URL"
+
+          if [ -n "${DISCORD_WEBHOOK_URL:-}" ]; then
+            curl -sf -X POST "$DISCORD_WEBHOOK_URL" \
+              -H 'Content-Type: application/json' \
+              -d "$(jq -n --arg c "*Atlas updated* — ${SHORT}. PR: ${PR_URL}" '{content: $c}')" \
+              || echo "::warning::Discord webhook POST failed"
+          else
+            echo "DISCORD_WEBHOOK_URL unset — skipping Discord notify."
+          fi

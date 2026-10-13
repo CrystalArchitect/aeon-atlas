@@ -13,8 +13,8 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.4.5"
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
   },
   "dependencies": {
     "@amplitude/ai": "^0.16.0"

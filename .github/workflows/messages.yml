@@ -622,6 +622,9 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -641,6 +644,45 @@ jobs:
           TODAY=$(date -u +%Y-%m-%d)
           CONFIG_MODEL=$(grep -E '^model:' aeon.yml | sed 's/^model: *//' | tr -d ' ')
           MODEL="${CONFIG_MODEL:-claude-opus-4-8}"
+
+          # --- AI Gateway routing (same as .github/workflows/aeon.yml) ---
+          GATEWAY=$(grep -A1 '^gateway:' aeon.yml | grep 'provider:' | sed 's/.*provider:[[:space:]]*//' | sed "s/[\"' ]//g" || true)
+          GATEWAY="${GATEWAY:-direct}"
+          echo "Gateway: $GATEWAY"
+
+          if [ "$GATEWAY" = "bankr" ]; then
+            if [ -z "${BANKR_LLM_KEY:-}" ]; then
+              echo "::error::gateway.provider=bankr but BANKR_LLM_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://llm.bankr.bot"
+            export ANTHROPIC_AUTH_TOKEN="$BANKR_LLM_KEY"
+            unset ANTHROPIC_API_KEY
+            unset CLAUDE_CODE_OAUTH_TOKEN
+            echo "::notice::Routing through Bankr Gateway (https://llm.bankr.bot)"
+          elif [ "$GATEWAY" = "openrouter" ]; then
+            if [ -z "${OPENROUTER_API_KEY:-}" ]; then
+              echo "::error::gateway.provider=openrouter but OPENROUTER_API_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+            export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
+            export ANTHROPIC_API_KEY=""
+            unset CLAUDE_CODE_OAUTH_TOKEN
+            echo "::notice::Routing through OpenRouter (https://openrouter.ai/api)"
+          elif [ "$GATEWAY" = "deepseek" ]; then
+            if [ -z "${DEEPSEEK_API_KEY:-}" ]; then
+              echo "::error::gateway.provider=deepseek but DEEPSEEK_API_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
+            export ANTHROPIC_AUTH_TOKEN="$DEEPSEEK_API_KEY"
+            export ANTHROPIC_API_KEY=""
+            unset CLAUDE_CODE_OAUTH_TOKEN
+            echo "::notice::Routing through DeepSeek (https://api.deepseek.com/anthropic)"
+          else
+            echo "::notice::Using direct Anthropic API"
+          fi
 
           cat > ./notify << 'NOTIFY_SCRIPT'
           #!/usr/bin/env bash
