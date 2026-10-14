@@ -70,13 +70,13 @@
   "fork-first-run-alert": {
     "last_dispatch": "2026-09-20T13:43:57Z",
     "last_status": "failed",
-    "last_failed": "2026-10-14T15:23:04Z",
-    "total_runs": 173,
+    "last_failed": "2026-10-14T19:30:33Z",
+    "total_runs": 175,
     "total_successes": 0,
-    "total_failures": 173,
-    "consecutive_failures": 173,
+    "total_failures": 175,
+    "consecutive_failures": 175,
     "success_rate": 0,
-    "last_error": ",\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget"
+    "last_error": "0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budge"
   },
   "skill-freshness": {
     "last_dispatch": "2026-09-20T13:43:57Z",
