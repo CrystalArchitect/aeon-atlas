@@ -161,11 +161,11 @@
   },
   "fork-skill-digest": {
     "last_status": "failed",
-    "last_failed": "2026-10-17T07:42:46Z",
-    "total_runs": 129,
+    "last_failed": "2026-10-17T11:46:08Z",
+    "total_runs": 130,
     "total_successes": 0,
-    "total_failures": 129,
-    "consecutive_failures": 129,
+    "total_failures": 130,
+    "consecutive_failures": 130,
     "success_rate": 0,
     "last_error": "started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type"
   },
