@@ -1,16 +1,15 @@
 ---
 title: "star-momentum-alert"
 tags: [novel-skill]
-adoption: 116
+adoption: 113
 ---
 
 # `star-momentum-alert`
 
-Custom skill shipped by 116 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 113 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/0xHarish-aeon|0xHarish/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
@@ -43,7 +42,6 @@ Custom skill shipped by 116 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/loessy-aeon|loessy/aeon]]
 - [[forks/AntFleet-aeon|AntFleet/aeon]]
 - [[forks/houndflow-aeon|houndflow/aeon]]
-- [[forks/AIRYDER-aeon|AIRYDER/aeon]]
 - [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
 - [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
 - [[forks/richard7463-aeon|richard7463/aeon]]
@@ -122,7 +120,6 @@ Custom skill shipped by 116 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
 - [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
-- [[forks/ether-btc-aeon|ether-btc/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
 - [[forks/Aldine-aeon|Aldine/aeon]]
 - [[forks/FreyjasWrath-aeon|FreyjasWrath/aeon]]

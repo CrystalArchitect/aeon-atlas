@@ -1,16 +1,15 @@
 ---
 title: "vigil"
 tags: [novel-skill]
-adoption: 41
+adoption: 40
 ---
 
 # `vigil`
 
-Custom skill shipped by 41 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 40 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]
