@@ -91,11 +91,11 @@
   },
   "workflow-security-audit": {
     "last_status": "failed",
-    "last_failed": "2026-10-19T13:50:50Z",
-    "total_runs": 195,
+    "last_failed": "2026-10-19T19:31:52Z",
+    "total_runs": 196,
     "total_successes": 0,
-    "total_failures": 195,
-    "consecutive_failures": 195,
+    "total_failures": 196,
+    "consecutive_failures": 196,
     "success_rate": 0,
     "last_error": "started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type"
   },
