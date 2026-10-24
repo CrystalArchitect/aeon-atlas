@@ -101,11 +101,11 @@
   },
   "fork-cohort": {
     "last_status": "failed",
-    "last_failed": "2026-10-24T10:58:24Z",
-    "total_runs": 229,
+    "last_failed": "2026-10-24T14:14:52Z",
+    "total_runs": 230,
     "total_successes": 0,
-    "total_failures": 229,
-    "consecutive_failures": 229,
+    "total_failures": 230,
+    "consecutive_failures": 230,
     "success_rate": 0,
     "last_error": "started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type"
   },
