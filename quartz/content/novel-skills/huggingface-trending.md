@@ -1,16 +1,15 @@
 ---
 title: "huggingface-trending"
 tags: [novel-skill]
-adoption: 145
+adoption: 141
 ---
 
 # `huggingface-trending`
 
-Custom skill shipped by 145 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 141 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]
@@ -75,7 +74,6 @@ Custom skill shipped by 145 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/loessy-aeon|loessy/aeon]]
 - [[forks/AntFleet-aeon|AntFleet/aeon]]
 - [[forks/houndflow-aeon|houndflow/aeon]]
-- [[forks/AIRYDER-aeon|AIRYDER/aeon]]
 - [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
 - [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
 - [[forks/richard7463-aeon|richard7463/aeon]]
@@ -141,7 +139,6 @@ Custom skill shipped by 145 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/lioapple-aeon|lioapple/aeon]]
 - [[forks/jiamicuisi-a11y-aeon|jiamicuisi-a11y/aeon]]
 - [[forks/madebyshun-blueagent-aeon|madebyshun/blueagent-aeon]]
-- [[forks/meichuanyi-aeon|meichuanyi/aeon]]
 - [[forks/johnny5OO-aeon|johnny5OO/aeon]]
 - [[forks/speend-aeon|speend/aeon]]
 - [[forks/theipgirl-aeon|theipgirl/aeon]]
@@ -152,6 +149,5 @@ Custom skill shipped by 145 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/itr010038-aeon|itr010038/aeon]]
 - [[forks/Boodszw-Boodszw_Bread|Boodszw/Boodszw_Bread]]
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
-- [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
