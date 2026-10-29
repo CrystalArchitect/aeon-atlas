@@ -141,11 +141,11 @@
   },
   "fleet-skill-adoption": {
     "last_status": "failed",
-    "last_failed": "2026-10-29T02:36:25Z",
-    "total_runs": 264,
+    "last_failed": "2026-10-29T08:53:08Z",
+    "total_runs": 265,
     "total_successes": 0,
-    "total_failures": 264,
-    "consecutive_failures": 264,
+    "total_failures": 265,
+    "consecutive_failures": 265,
     "success_rate": 0,
     "last_error": "started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type"
   },
