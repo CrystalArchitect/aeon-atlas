@@ -2,11 +2,11 @@
   "heartbeat": {
     "last_dispatch": "2026-09-20T13:43:57Z",
     "last_status": "failed",
-    "last_failed": "2026-10-31T12:58:03Z",
-    "total_runs": 564,
+    "last_failed": "2026-10-31T17:29:15Z",
+    "total_runs": 565,
     "total_successes": 247,
-    "total_failures": 317,
-    "consecutive_failures": 288,
+    "total_failures": 318,
+    "consecutive_failures": 289,
     "success_rate": 0.44,
     "last_error": "started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type",
     "last_success": "2026-09-15T21:29:24Z"
