@@ -1,16 +1,15 @@
 ---
 title: "polymarket"
 tags: [novel-skill]
-adoption: 79
+adoption: 77
 ---
 
 # `polymarket`
 
-Custom skill shipped by 79 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 77 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]
@@ -54,7 +53,6 @@ Custom skill shipped by 79 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/loessy-aeon|loessy/aeon]]
 - [[forks/AntFleet-aeon|AntFleet/aeon]]
 - [[forks/houndflow-aeon|houndflow/aeon]]
-- [[forks/AIRYDER-aeon|AIRYDER/aeon]]
 - [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
 - [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
 - [[forks/richard7463-aeon|richard7463/aeon]]

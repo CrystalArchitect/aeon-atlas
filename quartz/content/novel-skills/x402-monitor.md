@@ -1,16 +1,15 @@
 ---
 title: "x402-monitor"
 tags: [novel-skill]
-adoption: 94
+adoption: 91
 ---
 
 # `x402-monitor`
 
-Custom skill shipped by 94 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 91 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/rajkaria-aeon|rajkaria/aeon]]
 - [[forks/tenequm-aeon|tenequm/aeon]]
 - [[forks/ziyosteve-aeon|ziyosteve/aeon]]
@@ -75,7 +74,6 @@ Custom skill shipped by 94 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/loessy-aeon|loessy/aeon]]
 - [[forks/AntFleet-aeon|AntFleet/aeon]]
 - [[forks/houndflow-aeon|houndflow/aeon]]
-- [[forks/AIRYDER-aeon|AIRYDER/aeon]]
 - [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
 - [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
 - [[forks/richard7463-aeon|richard7463/aeon]]
@@ -103,4 +101,3 @@ Custom skill shipped by 94 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/antfleet-ops-aeon|antfleet-ops/aeon]]
 - [[forks/nigelon11-aeon|nigelon11/aeon]]
 - [[forks/webguy-cloud-aeon|webguy-cloud/aeon]]
-- [[forks/Svector-anu-svectors-lab|Svector-anu/svectors-lab]]
