@@ -1,12 +1,12 @@
 ---
 title: "ai-framework-watch"
 tags: [novel-skill]
-adoption: 109
+adoption: 107
 ---
 
 # `ai-framework-watch`
 
-Custom skill shipped by 109 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 107 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -107,7 +107,6 @@ Custom skill shipped by 109 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/lioapple-aeon|lioapple/aeon]]
 - [[forks/jiamicuisi-a11y-aeon|jiamicuisi-a11y/aeon]]
 - [[forks/madebyshun-blueagent-aeon|madebyshun/blueagent-aeon]]
-- [[forks/meichuanyi-aeon|meichuanyi/aeon]]
 - [[forks/johnny5OO-aeon|johnny5OO/aeon]]
 - [[forks/speend-aeon|speend/aeon]]
 - [[forks/theipgirl-aeon|theipgirl/aeon]]
@@ -117,5 +116,4 @@ Custom skill shipped by 109 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/Danypsy-aeon|Danypsy/aeon]]
 - [[forks/itr010038-aeon|itr010038/aeon]]
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
-- [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]

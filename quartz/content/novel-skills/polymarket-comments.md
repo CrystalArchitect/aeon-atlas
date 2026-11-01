@@ -1,12 +1,12 @@
 ---
 title: "polymarket-comments"
 tags: [novel-skill]
-adoption: 154
+adoption: 152
 ---
 
 # `polymarket-comments`
 
-Custom skill shipped by 154 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 152 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -119,7 +119,6 @@ Custom skill shipped by 154 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/lioapple-aeon|lioapple/aeon]]
 - [[forks/jiamicuisi-a11y-aeon|jiamicuisi-a11y/aeon]]
 - [[forks/madebyshun-blueagent-aeon|madebyshun/blueagent-aeon]]
-- [[forks/meichuanyi-aeon|meichuanyi/aeon]]
 - [[forks/johnny5OO-aeon|johnny5OO/aeon]]
 - [[forks/speend-aeon|speend/aeon]]
 - [[forks/amandi99-aeon|amandi99/aeon]]
@@ -129,7 +128,6 @@ Custom skill shipped by 154 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/itr010038-aeon|itr010038/aeon]]
 - [[forks/Boodszw-Boodszw_Bread|Boodszw/Boodszw_Bread]]
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
-- [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
 - [[forks/Aldine-aeon|Aldine/aeon]]

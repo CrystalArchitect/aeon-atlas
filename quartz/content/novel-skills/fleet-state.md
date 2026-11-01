@@ -1,12 +1,12 @@
 ---
 title: "fleet-state"
 tags: [novel-skill]
-adoption: 136
+adoption: 134
 ---
 
 # `fleet-state`
 
-Custom skill shipped by 136 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 134 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -59,7 +59,6 @@ Custom skill shipped by 136 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/runchr-org-aeon|runchr-org/aeon]]
 - [[forks/brainlabors-dot-aeon|brainlabors-dot/aeon]]
 - [[forks/gitlumen-team-aeon|gitlumen-team/aeon]]
-- [[forks/yindaqiu-aeon|yindaqiu/aeon]]
 - [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]]
 - [[forks/Damoncrypto-aeon|Damoncrypto/aeon]]
 - [[forks/BBridgeers-aeon|BBridgeers/aeon]]
@@ -139,7 +138,6 @@ Custom skill shipped by 136 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/lioapple-aeon|lioapple/aeon]]
 - [[forks/jiamicuisi-a11y-aeon|jiamicuisi-a11y/aeon]]
 - [[forks/madebyshun-blueagent-aeon|madebyshun/blueagent-aeon]]
-- [[forks/meichuanyi-aeon|meichuanyi/aeon]]
 - [[forks/johnny5OO-aeon|johnny5OO/aeon]]
 - [[forks/speend-aeon|speend/aeon]]
 - [[forks/amandi99-aeon|amandi99/aeon]]

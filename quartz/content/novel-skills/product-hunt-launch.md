@@ -1,12 +1,12 @@
 ---
 title: "product-hunt-launch"
 tags: [novel-skill]
-adoption: 99
+adoption: 98
 ---
 
 # `product-hunt-launch`
 
-Custom skill shipped by 99 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 98 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -106,6 +106,5 @@ Custom skill shipped by 99 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/lioapple-aeon|lioapple/aeon]]
 - [[forks/jiamicuisi-a11y-aeon|jiamicuisi-a11y/aeon]]
 - [[forks/madebyshun-blueagent-aeon|madebyshun/blueagent-aeon]]
-- [[forks/meichuanyi-aeon|meichuanyi/aeon]]
 - [[forks/johnny5OO-aeon|johnny5OO/aeon]]
 - [[forks/speend-aeon|speend/aeon]]

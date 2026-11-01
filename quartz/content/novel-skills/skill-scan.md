@@ -1,12 +1,12 @@
 ---
 title: "skill-scan"
 tags: [novel-skill]
-adoption: 34
+adoption: 33
 ---
 
 # `skill-scan`
 
-Custom skill shipped by 34 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 33 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -41,6 +41,5 @@ Custom skill shipped by 34 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/runchr-org-aeon|runchr-org/aeon]]
 - [[forks/brainlabors-dot-aeon|brainlabors-dot/aeon]]
 - [[forks/gitlumen-team-aeon|gitlumen-team/aeon]]
-- [[forks/yindaqiu-aeon|yindaqiu/aeon]]
 - [[forks/nigelon11-aeon|nigelon11/aeon]]
 - [[forks/webguy-cloud-aeon|webguy-cloud/aeon]]
