@@ -1,12 +1,12 @@
 ---
 title: "ctrl"
 tags: [novel-skill]
-adoption: 39
+adoption: 36
 ---
 
 # `ctrl`
 
-Custom skill shipped by 39 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 36 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -39,13 +39,10 @@ Custom skill shipped by 39 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/runchr-org-aeon|runchr-org/aeon]]
 - [[forks/brainlabors-dot-aeon|brainlabors-dot/aeon]]
 - [[forks/gitlumen-team-aeon|gitlumen-team/aeon]]
-- [[forks/yindaqiu-aeon|yindaqiu/aeon]]
 - [[forks/nigelon11-aeon|nigelon11/aeon]]
 - [[forks/webguy-cloud-aeon|webguy-cloud/aeon]]
 - [[forks/Aluma-aeon|Aluma/aeon]]
 - [[forks/aeonbookai-aeonTemplate|aeonbookai/aeonTemplate]]
-- [[forks/enuno-noesis-aeon|enuno/noesis-aeon]]
 - [[forks/ostrov9878-aeon|ostrov9878/aeon]]
 - [[forks/techdigger-aeon|techdigger/aeon]]
-- [[forks/KingKaonix-aeon|KingKaonix/aeon]]
 - [[forks/mattsegura-aeon|mattsegura/aeon]]
