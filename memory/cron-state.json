@@ -81,11 +81,11 @@
   "skill-freshness": {
     "last_dispatch": "2026-09-20T13:43:57Z",
     "last_status": "failed",
-    "last_failed": "2026-11-06T09:59:26Z",
-    "total_runs": 314,
+    "last_failed": "2026-11-06T17:11:05Z",
+    "total_runs": 315,
     "total_successes": 0,
-    "total_failures": 314,
-    "consecutive_failures": 314,
+    "total_failures": 315,
+    "consecutive_failures": 315,
     "success_rate": 0,
     "last_error": "started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type"
   },
