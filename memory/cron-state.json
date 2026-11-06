@@ -70,11 +70,11 @@
   "fork-first-run-alert": {
     "last_dispatch": "2026-09-20T13:43:57Z",
     "last_status": "failed",
-    "last_failed": "2026-11-05T22:51:58Z",
-    "total_runs": 329,
+    "last_failed": "2026-11-06T02:53:49Z",
+    "total_runs": 331,
     "total_successes": 0,
-    "total_failures": 329,
-    "consecutive_failures": 329,
+    "total_failures": 331,
+    "consecutive_failures": 331,
     "success_rate": 0,
     "last_error": "started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type"
   },
