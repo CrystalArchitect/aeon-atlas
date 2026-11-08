@@ -1,21 +1,19 @@
 ---
 title: "okf-ingest"
 tags: [novel-skill]
-adoption: 17
+adoption: 15
 ---
 
 # `okf-ingest`
 
-Custom skill shipped by 17 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 15 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
 - [[forks/Aluma-aeon|Aluma/aeon]]
 - [[forks/aeonbookai-aeonTemplate|aeonbookai/aeonTemplate]]
-- [[forks/enuno-noesis-aeon|enuno/noesis-aeon]]
 - [[forks/ostrov9878-aeon|ostrov9878/aeon]]
 - [[forks/techdigger-aeon|techdigger/aeon]]
-- [[forks/KingKaonix-aeon|KingKaonix/aeon]]
 - [[forks/mattsegura-aeon|mattsegura/aeon]]
 - [[forks/hesreallyhim-aeon-fork|hesreallyhim/aeon-fork]]
 - [[forks/bspacer-aeon|bspacer/aeon]]

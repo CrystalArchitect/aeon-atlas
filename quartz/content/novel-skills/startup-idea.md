@@ -1,12 +1,12 @@
 ---
 title: "startup-idea"
 tags: [novel-skill]
-adoption: 177
+adoption: 175
 ---
 
 # `startup-idea`
 
-Custom skill shipped by 177 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 175 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -59,7 +59,6 @@ Custom skill shipped by 177 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/runchr-org-aeon|runchr-org/aeon]]
 - [[forks/brainlabors-dot-aeon|brainlabors-dot/aeon]]
 - [[forks/gitlumen-team-aeon|gitlumen-team/aeon]]
-- [[forks/yindaqiu-aeon|yindaqiu/aeon]]
 - [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]]
 - [[forks/Damoncrypto-aeon|Damoncrypto/aeon]]
 - [[forks/BBridgeers-aeon|BBridgeers/aeon]]
@@ -151,7 +150,6 @@ Custom skill shipped by 177 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/itr010038-aeon|itr010038/aeon]]
 - [[forks/Boodszw-Boodszw_Bread|Boodszw/Boodszw_Bread]]
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
-- [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
 - [[forks/Aldine-aeon|Aldine/aeon]]

@@ -1,12 +1,12 @@
 ---
 title: "pr-merge-queue"
 tags: [novel-skill]
-adoption: 17
+adoption: 18
 ---
 
 # `pr-merge-queue`
 
-Custom skill shipped by 17 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 18 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -27,3 +27,4 @@ Custom skill shipped by 17 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/LiamVisionary-aeon|LiamVisionary/aeon]]
 - [[forks/Atrium-Hermes-aeon|Atrium-Hermes/aeon]]
 - [[forks/sparkleware-aeon|sparkleware/aeon]]
+- [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]]

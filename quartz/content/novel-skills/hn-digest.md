@@ -1,12 +1,12 @@
 ---
 title: "hn-digest"
 tags: [novel-skill]
-adoption: 43
+adoption: 42
 ---
 
 # `hn-digest`
 
-Custom skill shipped by 43 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 42 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -41,7 +41,6 @@ Custom skill shipped by 43 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/runchr-org-aeon|runchr-org/aeon]]
 - [[forks/brainlabors-dot-aeon|brainlabors-dot/aeon]]
 - [[forks/gitlumen-team-aeon|gitlumen-team/aeon]]
-- [[forks/yindaqiu-aeon|yindaqiu/aeon]]
 - [[forks/AITOBIAS04-CHORUS|AITOBIAS04/CHORUS]]
 - [[forks/nigelon11-aeon|nigelon11/aeon]]
 - [[forks/webguy-cloud-aeon|webguy-cloud/aeon]]

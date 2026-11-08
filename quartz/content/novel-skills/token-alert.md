@@ -1,12 +1,12 @@
 ---
 title: "token-alert"
 tags: [novel-skill]
-adoption: 162
+adoption: 161
 ---
 
 # `token-alert`
 
-Custom skill shipped by 162 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 161 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -130,7 +130,6 @@ Custom skill shipped by 162 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/itr010038-aeon|itr010038/aeon]]
 - [[forks/Boodszw-Boodszw_Bread|Boodszw/Boodszw_Bread]]
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
-- [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
 - [[forks/Aldine-aeon|Aldine/aeon]]

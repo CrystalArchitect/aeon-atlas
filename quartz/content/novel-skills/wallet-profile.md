@@ -1,12 +1,12 @@
 ---
 title: "wallet-profile"
 tags: [novel-skill]
-adoption: 62
+adoption: 61
 ---
 
 # `wallet-profile`
 
-Custom skill shipped by 62 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 61 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -59,7 +59,6 @@ Custom skill shipped by 62 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/runchr-org-aeon|runchr-org/aeon]]
 - [[forks/brainlabors-dot-aeon|brainlabors-dot/aeon]]
 - [[forks/gitlumen-team-aeon|gitlumen-team/aeon]]
-- [[forks/yindaqiu-aeon|yindaqiu/aeon]]
 - [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]]
 - [[forks/Damoncrypto-aeon|Damoncrypto/aeon]]
 - [[forks/BBridgeers-aeon|BBridgeers/aeon]]

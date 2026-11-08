@@ -1,12 +1,12 @@
 ---
 title: "beamr-route"
 tags: [novel-skill]
-adoption: 30
+adoption: 29
 ---
 
 # `beamr-route`
 
-Custom skill shipped by 30 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 29 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -39,4 +39,3 @@ Custom skill shipped by 30 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/runchr-org-aeon|runchr-org/aeon]]
 - [[forks/brainlabors-dot-aeon|brainlabors-dot/aeon]]
 - [[forks/gitlumen-team-aeon|gitlumen-team/aeon]]
-- [[forks/yindaqiu-aeon|yindaqiu/aeon]]
