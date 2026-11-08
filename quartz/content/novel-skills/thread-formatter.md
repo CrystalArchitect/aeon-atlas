@@ -1,12 +1,12 @@
 ---
 title: "thread-formatter"
 tags: [novel-skill]
-adoption: 126
+adoption: 125
 ---
 
 # `thread-formatter`
 
-Custom skill shipped by 126 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 125 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -129,7 +129,6 @@ Custom skill shipped by 126 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/itr010038-aeon|itr010038/aeon]]
 - [[forks/Boodszw-Boodszw_Bread|Boodszw/Boodszw_Bread]]
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
-- [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
 - [[forks/Aldine-aeon|Aldine/aeon]]

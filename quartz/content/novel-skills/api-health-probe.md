@@ -1,12 +1,12 @@
 ---
 title: "api-health-probe"
 tags: [novel-skill]
-adoption: 6
+adoption: 7
 ---
 
 # `api-health-probe`
 
-Custom skill shipped by 6 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 7 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -16,3 +16,4 @@ Custom skill shipped by 6 forks. Not present in upstream `aaronjmars/aeon/skills
 - [[forks/alfahadgm-aeon|alfahadgm/aeon]]
 - [[forks/dannysrod-aeon|dannysrod/aeon]]
 - [[forks/daxaur-aeon|daxaur/aeon]]
+- [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]]
