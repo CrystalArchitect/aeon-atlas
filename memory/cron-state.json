@@ -101,13 +101,15 @@
   },
   "fork-first-run-alert": {
     "last_dispatch": "2026-11-13T21:30:43Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-11-06T21:52:33Z",
-    "total_runs": 8,
+    "total_runs": 9,
     "total_successes": 8,
-    "total_failures": 0,
-    "consecutive_failures": 0,
-    "success_rate": 1
+    "total_failures": 1,
+    "consecutive_failures": 1,
+    "success_rate": 0.89,
+    "last_failed": "2026-11-13T21:30:59Z",
+    "last_error": "spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":true,\""
   },
   "skill-update-check": {
     "last_dispatch": "2026-10-25T20:46:12Z",
