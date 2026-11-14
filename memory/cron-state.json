@@ -45,15 +45,15 @@
   },
   "skill-health": {
     "last_dispatch": "2026-11-13T15:31:19Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-11-09T19:13:21Z",
-    "total_runs": 14,
+    "total_runs": 15,
     "total_successes": 9,
-    "total_failures": 5,
-    "consecutive_failures": 5,
-    "success_rate": 0.64,
-    "last_failed": "2026-11-13T15:31:33Z",
-    "last_error": "started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type"
+    "total_failures": 6,
+    "consecutive_failures": 6,
+    "success_rate": 0.6,
+    "last_failed": "2026-11-14T19:30:12Z",
+    "last_error": "spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":true,\""
   },
   "skill-leaderboard": {
     "last_dispatch": "2026-11-08T18:55:17Z",
