@@ -241,13 +241,15 @@
   },
   "ai-framework-watch": {
     "last_dispatch": "2026-11-23T09:39:06Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-11-09T08:48:03Z",
-    "total_runs": 1,
+    "total_runs": 3,
     "total_successes": 1,
-    "total_failures": 0,
-    "consecutive_failures": 0,
-    "success_rate": 1
+    "total_failures": 2,
+    "consecutive_failures": 2,
+    "success_rate": 0.33,
+    "last_failed": "2026-11-23T09:39:30Z",
+    "last_error": "spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":true,\""
   },
   "workflow-security-audit": {
     "last_dispatch": "2026-11-15T16:38:16Z",
